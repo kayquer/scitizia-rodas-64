@@ -1,0 +1,24 @@
+cff-version: 1.2.0
+message: "Se usar estes modelos, cite o repositório assim (opcional: as rodas e os pneus estão em domínio público)."
+title: "Scitizia: rodas e pneus 64 bits - 39 rodas, 36 pneus e 39 conjuntos low poly em glTF/GLB"
+type: dataset
+authors:
+  - alias: kayquer
+repository-code: "https://github.com/kayquer/scitizia-rodas-64"
+url: "https://github.com/kayquer/scitizia-rodas-64"
+license: CC0-1.0
+abstract: "Coleção de 39 rodas (aro 13 a 18), 36 pneus em 9 tipos e 39 conjuntos montados de roda e pneu (lado esquerdo e direito), em baixo polígono com visual retrô de console de 64 bits, em glTF 2.0 binário (.glb), com marcas inventadas, texturas PNG, prévias e catálogo JSON com medidas e uso por piso."
+keywords:
+  - low poly
+  - wheels
+  - tires
+  - tyres
+  - rims
+  - rally
+  - racing
+  - 3d models
+  - gltf
+  - glb
+  - game assets
+  - retro
+  - 64-bit

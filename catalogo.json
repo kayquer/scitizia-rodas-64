@@ -1,0 +1,2598 @@
+{
+ "nome": "Scitizia: rodas e pneus 64 bits",
+ "versao": 1,
+ "unidades": "metros; Y para cima; giro em torno do eixo X; pivô no centro do cubo; face de fora para +X (rodas do lado esquerdo de um carro que anda para +Z)",
+ "referencia": {
+  "diametro_pneu_mm": 660,
+  "largura_pneu_mm": 215,
+  "aro_dos_pneus": 15,
+  "nota": "a altura e a largura de cada pneu variam com o tipo (fração da referência); o aro aparece um pouco maior que o real, como no jogo"
+ },
+ "campos": {
+  "aro": "aro em polegadas",
+  "dimensoes": "largura (X) e diâmetro (Y, Z) da caixa do modelo, em metros",
+  "triangulos": "triângulos do .glb",
+  "kb": "tamanho do .glb com as texturas embutidas",
+  "peso_kg": "peso aproximado da roda (material e aro)",
+  "largura_mm": "largura da banda de rodagem",
+  "diametro_mm": "diâmetro externo do pneu",
+  "uso_por_piso": "onde o tipo de pneu rende mais e onde perde, em texto",
+  "arquivo_direita": "o mesmo conjunto espelhado para o lado direito (face de fora para -X), com o letreiro legível"
+ },
+ "marcas": {
+  "rodas": [
+   {
+    "id": "bigorna",
+    "nome": "Bigorna",
+    "lema": "Aço estampado que entorta e não quebra: a roda do rali raiz.",
+    "cor": "#9aa3ad"
+   },
+   {
+    "id": "quebramola",
+    "nome": "Quebra-Mola",
+    "lema": "Liga popular de rua, barata e bonita no estacionamento.",
+    "cor": "#c7c9cc"
+   },
+   {
+    "id": "aroeira",
+    "nome": "Aroeira",
+    "lema": "Liga fundida de rali: raio grosso, aguenta pedra e sarjeta.",
+    "cor": "#f2f2ee"
+   },
+   {
+    "id": "lumiar",
+    "nome": "Lumiar",
+    "lema": "Forjadas leves com o dourado das especiais de terra.",
+    "cor": "#d9a93a"
+   },
+   {
+    "id": "catavento",
+    "nome": "Catavento",
+    "lema": "Aros grandes e desenho de turbina para o asfalto rápido.",
+    "cor": "#8fb4d8"
+   },
+   {
+    "id": "tiziu",
+    "nome": "Tiziu",
+    "lema": "Raios vazados e cores de passarinho: a cara dos kit cars.",
+    "cor": "#f08a2c"
+   },
+   {
+    "id": "mandacaru",
+    "nome": "Mandacaru",
+    "lema": "Trava de talão e liga reforçada para quem anda fora da estrada.",
+    "cor": "#7d8a4e"
+   },
+   {
+    "id": "tauari",
+    "nome": "Tauari",
+    "lema": "Magnésio forjado de competição: a roda mais leve do parque.",
+    "cor": "#5a5f66"
+   }
+  ],
+  "pneus": [
+   {
+    "id": "saibro",
+    "nome": "Saibro",
+    "lema": "Nasceu nas estradas de terra do interior e só pensa em cascalho.",
+    "cor": "#f2c230"
+   },
+   {
+    "id": "geada",
+    "nome": "Geada",
+    "lema": "Inverno de verdade: cravos, lamelas e borracha que não endurece no frio.",
+    "cor": "#bfe3ff"
+   },
+   {
+    "id": "tracado",
+    "nome": "Traçado",
+    "lema": "Borracha de asfalto para quem vive na linha certa.",
+    "cor": "#ff4a3d"
+   },
+   {
+    "id": "tropeiro",
+    "nome": "Tropeiro",
+    "lema": "Garra larga e funda: atravessa atoleiro e vau.",
+    "cor": "#d9853b"
+   },
+   {
+    "id": "dunar",
+    "nome": "Dunar",
+    "lema": "Carcaça mole e banda larga para flutuar na areia.",
+    "cor": "#e8cf98"
+   },
+   {
+    "id": "orvalho",
+    "nome": "Orvalho",
+    "lema": "Sulcos que tiram água do caminho antes de o pneu chegar.",
+    "cor": "#6cc3ff"
+   },
+   {
+    "id": "pinhao",
+    "nome": "Pinhão",
+    "lema": "Pneu de batalha: dura muito, custa pouco e anda em tudo.",
+    "cor": "#f4f4f4"
+   }
+  ]
+ },
+ "tipos_de_pneu": [
+  {
+   "id": "asfalto",
+   "nome": "Asfalto",
+   "banda": "sulcos longitudinais",
+   "uso_por_piso": "Rende mais em asfalto, asfalto sujo e ponte de madeira; perde em lama, neve, gelo e areia."
+  },
+  {
+   "id": "slick",
+   "nome": "Slick",
+   "banda": "lisa (slick)",
+   "uso_por_piso": "Rende mais em asfalto; na média em asfalto sujo e ponte de madeira; perde em cascalho, terra, grama, lama, neve, gelo, areia e água rasa; perde muito na chuva."
+  },
+  {
+   "id": "chuva",
+   "nome": "Chuva",
+   "banda": "sulcos em flecha",
+   "uso_por_piso": "Rende mais em asfalto, asfalto sujo e ponte de madeira; na média em cascalho, terra e grama; tira água e segura bem na chuva."
+  },
+  {
+   "id": "cascalho",
+   "nome": "Cascalho",
+   "banda": "blocos alternados",
+   "uso_por_piso": "Rende mais em cascalho, terra e grama; na média em asfalto sujo, ponte de madeira, lama, gelo, areia e água rasa; aguenta chuva."
+  },
+  {
+   "id": "terra",
+   "nome": "Terra e misto",
+   "banda": "blocos pequenos com lamelas",
+   "uso_por_piso": "Rende mais em terra, cascalho, grama e lama; na média em asfalto, asfalto sujo, ponte de madeira, neve, gelo, areia e água rasa; aguenta chuva."
+  },
+  {
+   "id": "lama",
+   "nome": "Lama",
+   "banda": "garras altas em V",
+   "uso_por_piso": "Rende mais em lama, água rasa, grama e terra; na média em cascalho e neve; perde em asfalto; aguenta chuva."
+  },
+  {
+   "id": "neve",
+   "nome": "Neve com cravos",
+   "banda": "blocos com lamelas",
+   "uso_por_piso": "Rende mais em gelo e neve; na média em terra; perde em asfalto e asfalto sujo."
+  },
+  {
+   "id": "gelo",
+   "nome": "Gelo (cravo longo)",
+   "banda": "blocos com lamelas",
+   "uso_por_piso": "Rende mais em gelo e neve; perde em asfalto, asfalto sujo e ponte de madeira."
+  },
+  {
+   "id": "areia",
+   "nome": "Areia",
+   "banda": "pás transversais",
+   "uso_por_piso": "Rende mais em areia e cascalho; na média em asfalto sujo, ponte de madeira, terra, grama, lama, neve, gelo e água rasa."
+  }
+ ],
+ "rodas": [
+  {
+   "id": "bigorna_estampada_13",
+   "marca": "Bigorna",
+   "nome": "Bigorna Estampada",
+   "aro": 13,
+   "material": "Aço",
+   "desenho": "estampada com furos",
+   "cor": "#e9ebee",
+   "peso_kg": 6.7,
+   "triangulos": 432,
+   "kb": 49.3,
+   "dimensoes": [
+    0.192,
+    0.3698,
+    0.3698
+   ],
+   "arquivo": "modelos/rodas/bigorna_estampada_13.glb",
+   "textura": "texturas/aro_bigorna_estampada_13.png",
+   "previa": "previas/rodas/bigorna_estampada_13.png"
+  },
+  {
+   "id": "bigorna_estampada_15",
+   "marca": "Bigorna",
+   "nome": "Bigorna Estampada",
+   "aro": 15,
+   "material": "Aço",
+   "desenho": "estampada com furos",
+   "cor": "#e9ebee",
+   "peso_kg": 8.2,
+   "triangulos": 432,
+   "kb": 49.3,
+   "dimensoes": [
+    0.192,
+    0.4267,
+    0.4267
+   ],
+   "arquivo": "modelos/rodas/bigorna_estampada_15.glb",
+   "textura": "texturas/aro_bigorna_estampada_15.png",
+   "previa": "previas/rodas/bigorna_estampada_15.png"
+  },
+  {
+   "id": "bigorna_reforcada_14",
+   "marca": "Bigorna",
+   "nome": "Bigorna Reforçada de Rali",
+   "aro": 14,
+   "material": "Aço",
+   "desenho": "estampada com furos",
+   "cor": "#202226",
+   "peso_kg": 7.5,
+   "triangulos": 432,
+   "kb": 46.9,
+   "dimensoes": [
+    0.192,
+    0.3983,
+    0.3983
+   ],
+   "arquivo": "modelos/rodas/bigorna_reforcada_14.glb",
+   "textura": "texturas/aro_bigorna_reforcada_14.png",
+   "previa": "previas/rodas/bigorna_reforcada_14.png"
+  },
+  {
+   "id": "bigorna_reforcada_16",
+   "marca": "Bigorna",
+   "nome": "Bigorna Reforçada de Rali",
+   "aro": 16,
+   "material": "Aço",
+   "desenho": "estampada com furos",
+   "cor": "#202226",
+   "peso_kg": 9,
+   "triangulos": 432,
+   "kb": 46.9,
+   "dimensoes": [
+    0.192,
+    0.4552,
+    0.4552
+   ],
+   "arquivo": "modelos/rodas/bigorna_reforcada_16.glb",
+   "textura": "texturas/aro_bigorna_reforcada_16.png",
+   "previa": "previas/rodas/bigorna_reforcada_16.png"
+  },
+  {
+   "id": "bigorna_ventilada_15",
+   "marca": "Bigorna",
+   "nome": "Bigorna Ventilada Branca",
+   "aro": 15,
+   "material": "Aço",
+   "desenho": "estampada com fendas",
+   "cor": "#f4f4f1",
+   "peso_kg": 8.2,
+   "triangulos": 432,
+   "kb": 47.5,
+   "dimensoes": [
+    0.192,
+    0.4267,
+    0.4267
+   ],
+   "arquivo": "modelos/rodas/bigorna_ventilada_15.glb",
+   "textura": "texturas/aro_bigorna_ventilada_15.png",
+   "previa": "previas/rodas/bigorna_ventilada_15.png"
+  },
+  {
+   "id": "quebramola_estrela_13",
+   "marca": "Quebra-Mola",
+   "nome": "Quebra-Mola Estrela",
+   "aro": 13,
+   "material": "Liga fundida",
+   "desenho": "raios (5)",
+   "cor": "#c9ccd1",
+   "peso_kg": 5.6,
+   "triangulos": 432,
+   "kb": 54.2,
+   "dimensoes": [
+    0.192,
+    0.3698,
+    0.3698
+   ],
+   "arquivo": "modelos/rodas/quebramola_estrela_13.glb",
+   "textura": "texturas/aro_quebramola_estrela_13.png",
+   "previa": "previas/rodas/quebramola_estrela_13.png"
+  },
+  {
+   "id": "quebramola_estrela_15",
+   "marca": "Quebra-Mola",
+   "nome": "Quebra-Mola Estrela",
+   "aro": 15,
+   "material": "Liga fundida",
+   "desenho": "raios (5)",
+   "cor": "#c9ccd1",
+   "peso_kg": 6.9,
+   "triangulos": 432,
+   "kb": 54.2,
+   "dimensoes": [
+    0.192,
+    0.4267,
+    0.4267
+   ],
+   "arquivo": "modelos/rodas/quebramola_estrela_15.glb",
+   "textura": "texturas/aro_quebramola_estrela_15.png",
+   "previa": "previas/rodas/quebramola_estrela_15.png"
+  },
+  {
+   "id": "quebramola_malha_14",
+   "marca": "Quebra-Mola",
+   "nome": "Quebra-Mola Malha",
+   "aro": 14,
+   "material": "Liga fundida",
+   "desenho": "malha cruzada (10)",
+   "cor": "#b7bbc1",
+   "peso_kg": 6.3,
+   "triangulos": 432,
+   "kb": 61.3,
+   "dimensoes": [
+    0.192,
+    0.3983,
+    0.3983
+   ],
+   "arquivo": "modelos/rodas/quebramola_malha_14.glb",
+   "textura": "texturas/aro_quebramola_malha_14.png",
+   "previa": "previas/rodas/quebramola_malha_14.png"
+  },
+  {
+   "id": "quebramola_malha_16",
+   "marca": "Quebra-Mola",
+   "nome": "Quebra-Mola Malha",
+   "aro": 16,
+   "material": "Liga fundida",
+   "desenho": "malha cruzada (10)",
+   "cor": "#b7bbc1",
+   "peso_kg": 7.6,
+   "triangulos": 432,
+   "kb": 61.3,
+   "dimensoes": [
+    0.192,
+    0.4552,
+    0.4552
+   ],
+   "arquivo": "modelos/rodas/quebramola_malha_16.glb",
+   "textura": "texturas/aro_quebramola_malha_16.png",
+   "previa": "previas/rodas/quebramola_malha_16.png"
+  },
+  {
+   "id": "quebramola_turbina_17",
+   "marca": "Quebra-Mola",
+   "nome": "Quebra-Mola Turbina",
+   "aro": 17,
+   "material": "Liga fundida",
+   "desenho": "hélice (12)",
+   "cor": "#aeb2b8",
+   "peso_kg": 8.2,
+   "triangulos": 432,
+   "kb": 49.9,
+   "dimensoes": [
+    0.192,
+    0.4836,
+    0.4836
+   ],
+   "arquivo": "modelos/rodas/quebramola_turbina_17.glb",
+   "textura": "texturas/aro_quebramola_turbina_17.png",
+   "previa": "previas/rodas/quebramola_turbina_17.png"
+  },
+  {
+   "id": "aroeira_seis_14",
+   "marca": "Aroeira",
+   "nome": "Aroeira Seis Raios",
+   "aro": 14,
+   "material": "Liga fundida",
+   "desenho": "raios (6)",
+   "cor": "#f2f2ee",
+   "peso_kg": 6.3,
+   "triangulos": 432,
+   "kb": 52.4,
+   "dimensoes": [
+    0.192,
+    0.3983,
+    0.3983
+   ],
+   "arquivo": "modelos/rodas/aroeira_seis_14.glb",
+   "textura": "texturas/aro_aroeira_seis_14.png",
+   "previa": "previas/rodas/aroeira_seis_14.png"
+  },
+  {
+   "id": "aroeira_seis_15",
+   "marca": "Aroeira",
+   "nome": "Aroeira Seis Raios",
+   "aro": 15,
+   "material": "Liga fundida",
+   "desenho": "raios (6)",
+   "cor": "#f2f2ee",
+   "peso_kg": 6.9,
+   "triangulos": 432,
+   "kb": 52.4,
+   "dimensoes": [
+    0.192,
+    0.4267,
+    0.4267
+   ],
+   "arquivo": "modelos/rodas/aroeira_seis_15.glb",
+   "textura": "texturas/aro_aroeira_seis_15.png",
+   "previa": "previas/rodas/aroeira_seis_15.png"
+  },
+  {
+   "id": "aroeira_cinco_15",
+   "marca": "Aroeira",
+   "nome": "Aroeira Cinco Largos",
+   "aro": 15,
+   "material": "Liga fundida",
+   "desenho": "raios (5)",
+   "cor": "#3b3f45",
+   "peso_kg": 6.9,
+   "triangulos": 432,
+   "kb": 53.7,
+   "dimensoes": [
+    0.192,
+    0.4267,
+    0.4267
+   ],
+   "arquivo": "modelos/rodas/aroeira_cinco_15.glb",
+   "textura": "texturas/aro_aroeira_cinco_15.png",
+   "previa": "previas/rodas/aroeira_cinco_15.png"
+  },
+  {
+   "id": "aroeira_cinco_17",
+   "marca": "Aroeira",
+   "nome": "Aroeira Cinco Largos",
+   "aro": 17,
+   "material": "Liga fundida",
+   "desenho": "raios (5)",
+   "cor": "#3b3f45",
+   "peso_kg": 8.2,
+   "triangulos": 432,
+   "kb": 53.7,
+   "dimensoes": [
+    0.192,
+    0.4836,
+    0.4836
+   ],
+   "arquivo": "modelos/rodas/aroeira_cinco_17.glb",
+   "textura": "texturas/aro_aroeira_cinco_17.png",
+   "previa": "previas/rodas/aroeira_cinco_17.png"
+  },
+  {
+   "id": "aroeira_doze_16",
+   "marca": "Aroeira",
+   "nome": "Aroeira Doze Raios",
+   "aro": 16,
+   "material": "Liga fundida",
+   "desenho": "raios (12)",
+   "cor": "#e8e6df",
+   "peso_kg": 7.6,
+   "triangulos": 432,
+   "kb": 60,
+   "dimensoes": [
+    0.192,
+    0.4552,
+    0.4552
+   ],
+   "arquivo": "modelos/rodas/aroeira_doze_16.glb",
+   "textura": "texturas/aro_aroeira_doze_16.png",
+   "previa": "previas/rodas/aroeira_doze_16.png"
+  },
+  {
+   "id": "lumiar_dez_14",
+   "marca": "Lumiar",
+   "nome": "Lumiar Dez Raios",
+   "aro": 14,
+   "material": "Forjada",
+   "desenho": "raios (10)",
+   "cor": "#d9a93a",
+   "peso_kg": 5.1,
+   "triangulos": 432,
+   "kb": 58.5,
+   "dimensoes": [
+    0.192,
+    0.3983,
+    0.3983
+   ],
+   "arquivo": "modelos/rodas/lumiar_dez_14.glb",
+   "textura": "texturas/aro_lumiar_dez_14.png",
+   "previa": "previas/rodas/lumiar_dez_14.png"
+  },
+  {
+   "id": "lumiar_dez_15",
+   "marca": "Lumiar",
+   "nome": "Lumiar Dez Raios",
+   "aro": 15,
+   "material": "Forjada",
+   "desenho": "raios (10)",
+   "cor": "#d9a93a",
+   "peso_kg": 5.6,
+   "triangulos": 432,
+   "kb": 58.5,
+   "dimensoes": [
+    0.192,
+    0.4267,
+    0.4267
+   ],
+   "arquivo": "modelos/rodas/lumiar_dez_15.glb",
+   "textura": "texturas/aro_lumiar_dez_15.png",
+   "previa": "previas/rodas/lumiar_dez_15.png"
+  },
+  {
+   "id": "lumiar_lamina_15",
+   "marca": "Lumiar",
+   "nome": "Lumiar Lâmina",
+   "aro": 15,
+   "material": "Forjada",
+   "desenho": "lâminas curvas (6)",
+   "cor": "#c98f2a",
+   "peso_kg": 5.6,
+   "triangulos": 432,
+   "kb": 55.6,
+   "dimensoes": [
+    0.192,
+    0.4267,
+    0.4267
+   ],
+   "arquivo": "modelos/rodas/lumiar_lamina_15.glb",
+   "textura": "texturas/aro_lumiar_lamina_15.png",
+   "previa": "previas/rodas/lumiar_lamina_15.png"
+  },
+  {
+   "id": "lumiar_lamina_17",
+   "marca": "Lumiar",
+   "nome": "Lumiar Lâmina",
+   "aro": 17,
+   "material": "Forjada",
+   "desenho": "lâminas curvas (6)",
+   "cor": "#c98f2a",
+   "peso_kg": 6.7,
+   "triangulos": 432,
+   "kb": 55.6,
+   "dimensoes": [
+    0.192,
+    0.4836,
+    0.4836
+   ],
+   "arquivo": "modelos/rodas/lumiar_lamina_17.glb",
+   "textura": "texturas/aro_lumiar_lamina_17.png",
+   "previa": "previas/rodas/lumiar_lamina_17.png"
+  },
+  {
+   "id": "lumiar_estrela_18",
+   "marca": "Lumiar",
+   "nome": "Lumiar Estrela Forjada",
+   "aro": 18,
+   "material": "Forjada",
+   "desenho": "raios (7)",
+   "cor": "#efe9dc",
+   "peso_kg": 7.3,
+   "triangulos": 432,
+   "kb": 57.1,
+   "dimensoes": [
+    0.192,
+    0.5121,
+    0.5121
+   ],
+   "arquivo": "modelos/rodas/lumiar_estrela_18.glb",
+   "textura": "texturas/aro_lumiar_estrela_18.png",
+   "previa": "previas/rodas/lumiar_estrela_18.png"
+  },
+  {
+   "id": "catavento_helice_16",
+   "marca": "Catavento",
+   "nome": "Catavento Hélice",
+   "aro": 16,
+   "material": "Liga fundida",
+   "desenho": "hélice (16)",
+   "cor": "#d6dade",
+   "peso_kg": 7.6,
+   "triangulos": 432,
+   "kb": 52.5,
+   "dimensoes": [
+    0.192,
+    0.4552,
+    0.4552
+   ],
+   "arquivo": "modelos/rodas/catavento_helice_16.glb",
+   "textura": "texturas/aro_catavento_helice_16.png",
+   "previa": "previas/rodas/catavento_helice_16.png"
+  },
+  {
+   "id": "catavento_helice_18",
+   "marca": "Catavento",
+   "nome": "Catavento Hélice",
+   "aro": 18,
+   "material": "Liga fundida",
+   "desenho": "hélice (16)",
+   "cor": "#d6dade",
+   "peso_kg": 8.9,
+   "triangulos": 432,
+   "kb": 52.8,
+   "dimensoes": [
+    0.192,
+    0.5121,
+    0.5121
+   ],
+   "arquivo": "modelos/rodas/catavento_helice_18.glb",
+   "textura": "texturas/aro_catavento_helice_18.png",
+   "previa": "previas/rodas/catavento_helice_18.png"
+  },
+  {
+   "id": "catavento_disco_17",
+   "marca": "Catavento",
+   "nome": "Catavento Disco Aero",
+   "aro": 17,
+   "material": "Forjada",
+   "desenho": "disco fechado",
+   "cor": "#f1f1ee",
+   "peso_kg": 6.7,
+   "triangulos": 432,
+   "kb": 51.6,
+   "dimensoes": [
+    0.192,
+    0.4836,
+    0.4836
+   ],
+   "arquivo": "modelos/rodas/catavento_disco_17.glb",
+   "textura": "texturas/aro_catavento_disco_17.png",
+   "previa": "previas/rodas/catavento_disco_17.png"
+  },
+  {
+   "id": "catavento_pas_15",
+   "marca": "Catavento",
+   "nome": "Catavento Pás Curvas",
+   "aro": 15,
+   "material": "Liga fundida",
+   "desenho": "lâminas curvas (9)",
+   "cor": "#8fb4d8",
+   "peso_kg": 6.9,
+   "triangulos": 432,
+   "kb": 60.6,
+   "dimensoes": [
+    0.192,
+    0.4267,
+    0.4267
+   ],
+   "arquivo": "modelos/rodas/catavento_pas_15.glb",
+   "textura": "texturas/aro_catavento_pas_15.png",
+   "previa": "previas/rodas/catavento_pas_15.png"
+  },
+  {
+   "id": "catavento_pas_18",
+   "marca": "Catavento",
+   "nome": "Catavento Pás Curvas",
+   "aro": 18,
+   "material": "Forjada",
+   "desenho": "lâminas curvas (9)",
+   "cor": "#22262b",
+   "peso_kg": 7.3,
+   "triangulos": 432,
+   "kb": 59.1,
+   "dimensoes": [
+    0.192,
+    0.5121,
+    0.5121
+   ],
+   "arquivo": "modelos/rodas/catavento_pas_18.glb",
+   "textura": "texturas/aro_catavento_pas_18.png",
+   "previa": "previas/rodas/catavento_pas_18.png"
+  },
+  {
+   "id": "tiziu_cruzeta_13",
+   "marca": "Tiziu",
+   "nome": "Tiziu Cruzeta",
+   "aro": 13,
+   "material": "Liga fundida",
+   "desenho": "raios (4)",
+   "cor": "#f08a2c",
+   "peso_kg": 5.6,
+   "triangulos": 432,
+   "kb": 49.5,
+   "dimensoes": [
+    0.192,
+    0.3698,
+    0.3698
+   ],
+   "arquivo": "modelos/rodas/tiziu_cruzeta_13.glb",
+   "textura": "texturas/aro_tiziu_cruzeta_13.png",
+   "previa": "previas/rodas/tiziu_cruzeta_13.png"
+  },
+  {
+   "id": "tiziu_cruzeta_15",
+   "marca": "Tiziu",
+   "nome": "Tiziu Cruzeta",
+   "aro": 15,
+   "material": "Liga fundida",
+   "desenho": "raios (4)",
+   "cor": "#f08a2c",
+   "peso_kg": 6.9,
+   "triangulos": 432,
+   "kb": 49.5,
+   "dimensoes": [
+    0.192,
+    0.4267,
+    0.4267
+   ],
+   "arquivo": "modelos/rodas/tiziu_cruzeta_15.glb",
+   "textura": "texturas/aro_tiziu_cruzeta_15.png",
+   "previa": "previas/rodas/tiziu_cruzeta_15.png"
+  },
+  {
+   "id": "tiziu_vazada_15",
+   "marca": "Tiziu",
+   "nome": "Tiziu Cinco Vazados",
+   "aro": 15,
+   "material": "Liga fundida",
+   "desenho": "estampada com furos",
+   "cor": "#3d7fd1",
+   "peso_kg": 6.9,
+   "triangulos": 432,
+   "kb": 48.7,
+   "dimensoes": [
+    0.192,
+    0.4267,
+    0.4267
+   ],
+   "arquivo": "modelos/rodas/tiziu_vazada_15.glb",
+   "textura": "texturas/aro_tiziu_vazada_15.png",
+   "previa": "previas/rodas/tiziu_vazada_15.png"
+  },
+  {
+   "id": "tiziu_vazada_17",
+   "marca": "Tiziu",
+   "nome": "Tiziu Cinco Vazados",
+   "aro": 17,
+   "material": "Forjada",
+   "desenho": "estampada com furos",
+   "cor": "#2f9e6a",
+   "peso_kg": 6.7,
+   "triangulos": 432,
+   "kb": 48,
+   "dimensoes": [
+    0.192,
+    0.4836,
+    0.4836
+   ],
+   "arquivo": "modelos/rodas/tiziu_vazada_17.glb",
+   "textura": "texturas/aro_tiziu_vazada_17.png",
+   "previa": "previas/rodas/tiziu_vazada_17.png"
+  },
+  {
+   "id": "tiziu_leque_14",
+   "marca": "Tiziu",
+   "nome": "Tiziu Leque",
+   "aro": 14,
+   "material": "Liga fundida",
+   "desenho": "lâminas curvas (8)",
+   "cor": "#f4f1e8",
+   "peso_kg": 6.3,
+   "triangulos": 432,
+   "kb": 56.6,
+   "dimensoes": [
+    0.192,
+    0.3983,
+    0.3983
+   ],
+   "arquivo": "modelos/rodas/tiziu_leque_14.glb",
+   "textura": "texturas/aro_tiziu_leque_14.png",
+   "previa": "previas/rodas/tiziu_leque_14.png"
+  },
+  {
+   "id": "mandacaru_trava_15",
+   "marca": "Mandacaru",
+   "nome": "Mandacaru Trava de Talão",
+   "aro": 15,
+   "material": "Aço",
+   "desenho": "trava de talão",
+   "cor": "#2b2d30",
+   "peso_kg": 8.2,
+   "triangulos": 432,
+   "kb": 47.7,
+   "dimensoes": [
+    0.192,
+    0.4267,
+    0.4267
+   ],
+   "arquivo": "modelos/rodas/mandacaru_trava_15.glb",
+   "textura": "texturas/aro_mandacaru_trava_15.png",
+   "previa": "previas/rodas/mandacaru_trava_15.png"
+  },
+  {
+   "id": "mandacaru_trava_17",
+   "marca": "Mandacaru",
+   "nome": "Mandacaru Trava de Talão",
+   "aro": 17,
+   "material": "Liga fundida",
+   "desenho": "trava de talão",
+   "cor": "#7d8a4e",
+   "peso_kg": 8.2,
+   "triangulos": 432,
+   "kb": 48.6,
+   "dimensoes": [
+    0.192,
+    0.4836,
+    0.4836
+   ],
+   "arquivo": "modelos/rodas/mandacaru_trava_17.glb",
+   "textura": "texturas/aro_mandacaru_trava_17.png",
+   "previa": "previas/rodas/mandacaru_trava_17.png"
+  },
+  {
+   "id": "mandacaru_sertao_16",
+   "marca": "Mandacaru",
+   "nome": "Mandacaru Sertão Oito Furos",
+   "aro": 16,
+   "material": "Liga fundida",
+   "desenho": "estampada com furos",
+   "cor": "#b9a27a",
+   "peso_kg": 7.6,
+   "triangulos": 432,
+   "kb": 48.5,
+   "dimensoes": [
+    0.192,
+    0.4552,
+    0.4552
+   ],
+   "arquivo": "modelos/rodas/mandacaru_sertao_16.glb",
+   "textura": "texturas/aro_mandacaru_sertao_16.png",
+   "previa": "previas/rodas/mandacaru_sertao_16.png"
+  },
+  {
+   "id": "mandacaru_lajedo_16",
+   "marca": "Mandacaru",
+   "nome": "Mandacaru Lajedo",
+   "aro": 16,
+   "material": "Forjada",
+   "desenho": "raios (6)",
+   "cor": "#3a3c37",
+   "peso_kg": 6.1,
+   "triangulos": 432,
+   "kb": 52.5,
+   "dimensoes": [
+    0.192,
+    0.4552,
+    0.4552
+   ],
+   "arquivo": "modelos/rodas/mandacaru_lajedo_16.glb",
+   "textura": "texturas/aro_mandacaru_lajedo_16.png",
+   "previa": "previas/rodas/mandacaru_lajedo_16.png"
+  },
+  {
+   "id": "tauari_magnesio_15",
+   "marca": "Tauari",
+   "nome": "Tauari Magnésio Seis",
+   "aro": 15,
+   "material": "Magnésio forjado",
+   "desenho": "raios (6)",
+   "cor": "#5a5f66",
+   "peso_kg": 4.7,
+   "triangulos": 432,
+   "kb": 52.3,
+   "dimensoes": [
+    0.192,
+    0.4267,
+    0.4267
+   ],
+   "arquivo": "modelos/rodas/tauari_magnesio_15.glb",
+   "textura": "texturas/aro_tauari_magnesio_15.png",
+   "previa": "previas/rodas/tauari_magnesio_15.png"
+  },
+  {
+   "id": "tauari_magnesio_17",
+   "marca": "Tauari",
+   "nome": "Tauari Magnésio Seis",
+   "aro": 17,
+   "material": "Magnésio forjado",
+   "desenho": "raios (6)",
+   "cor": "#5a5f66",
+   "peso_kg": 5.7,
+   "triangulos": 432,
+   "kb": 52.3,
+   "dimensoes": [
+    0.192,
+    0.4836,
+    0.4836
+   ],
+   "arquivo": "modelos/rodas/tauari_magnesio_17.glb",
+   "textura": "texturas/aro_tauari_magnesio_17.png",
+   "previa": "previas/rodas/tauari_magnesio_17.png"
+  },
+  {
+   "id": "tauari_malha_14",
+   "marca": "Tauari",
+   "nome": "Tauari Malha de Magnésio",
+   "aro": 14,
+   "material": "Magnésio forjado",
+   "desenho": "malha cruzada (8)",
+   "cor": "#e7e3d6",
+   "peso_kg": 4.2,
+   "triangulos": 432,
+   "kb": 59.7,
+   "dimensoes": [
+    0.192,
+    0.3983,
+    0.3983
+   ],
+   "arquivo": "modelos/rodas/tauari_malha_14.glb",
+   "textura": "texturas/aro_tauari_malha_14.png",
+   "previa": "previas/rodas/tauari_malha_14.png"
+  },
+  {
+   "id": "tauari_malha_16",
+   "marca": "Tauari",
+   "nome": "Tauari Malha de Magnésio",
+   "aro": 16,
+   "material": "Magnésio forjado",
+   "desenho": "malha cruzada (8)",
+   "cor": "#e7e3d6",
+   "peso_kg": 5.2,
+   "triangulos": 432,
+   "kb": 59.7,
+   "dimensoes": [
+    0.192,
+    0.4552,
+    0.4552
+   ],
+   "arquivo": "modelos/rodas/tauari_malha_16.glb",
+   "textura": "texturas/aro_tauari_malha_16.png",
+   "previa": "previas/rodas/tauari_malha_16.png"
+  },
+  {
+   "id": "tauari_monobloco_18",
+   "marca": "Tauari",
+   "nome": "Tauari Monobloco Dez",
+   "aro": 18,
+   "material": "Magnésio forjado",
+   "desenho": "raios (10)",
+   "cor": "#1d1f22",
+   "peso_kg": 6.1,
+   "triangulos": 432,
+   "kb": 57.9,
+   "dimensoes": [
+    0.192,
+    0.5121,
+    0.5121
+   ],
+   "arquivo": "modelos/rodas/tauari_monobloco_18.glb",
+   "textura": "texturas/aro_tauari_monobloco_18.png",
+   "previa": "previas/rodas/tauari_monobloco_18.png"
+  }
+ ],
+ "pneus": [
+  {
+   "id": "tracado_reta_final",
+   "marca": "Traçado",
+   "nome": "Traçado Reta Final",
+   "linha_de_serie": false,
+   "tipo": "slick",
+   "tipo_nome": "Slick",
+   "banda": "lisa (slick)",
+   "cravos": null,
+   "borracha": "média",
+   "aro": 15,
+   "largura_mm": 237,
+   "diametro_mm": 647,
+   "uso_por_piso": "Rende mais em asfalto; na média em asfalto sujo e ponte de madeira; perde em cascalho, terra, grama, lama, neve, gelo, areia e água rasa; perde muito na chuva.",
+   "borracha_nota": "borracha média: equilíbrio entre aderência e duração",
+   "triangulos": 336,
+   "kb": 51.6,
+   "dimensoes": [
+    0.2474,
+    0.6468,
+    0.6468
+   ],
+   "arquivo": "modelos/pneus/tracado_reta_final.glb",
+   "textura": "texturas/pneu_tracado_reta_final.png",
+   "previa": "previas/pneus/tracado_reta_final.png"
+  },
+  {
+   "id": "tracado_reta_final_m",
+   "marca": "Traçado",
+   "nome": "Traçado Reta Final M",
+   "linha_de_serie": false,
+   "tipo": "slick",
+   "tipo_nome": "Slick",
+   "banda": "lisa (slick)",
+   "cravos": null,
+   "borracha": "macia",
+   "aro": 15,
+   "largura_mm": 237,
+   "diametro_mm": 647,
+   "uso_por_piso": "Rende mais em asfalto; na média em asfalto sujo e ponte de madeira; perde em cascalho, terra, grama, lama, neve, gelo, areia e água rasa; perde muito na chuva.",
+   "borracha_nota": "borracha macia: mais aderência, gasta mais rápido",
+   "triangulos": 336,
+   "kb": 52.2,
+   "dimensoes": [
+    0.2474,
+    0.6468,
+    0.6468
+   ],
+   "arquivo": "modelos/pneus/tracado_reta_final_m.glb",
+   "textura": "texturas/pneu_tracado_reta_final_m.png",
+   "previa": "previas/pneus/tracado_reta_final_m.png"
+  },
+  {
+   "id": "tracado_tangente_m",
+   "marca": "Traçado",
+   "nome": "Traçado Tangente M",
+   "linha_de_serie": false,
+   "tipo": "asfalto",
+   "tipo_nome": "Asfalto",
+   "banda": "sulcos longitudinais",
+   "cravos": null,
+   "borracha": "macia",
+   "aro": 15,
+   "largura_mm": 228,
+   "diametro_mm": 653,
+   "uso_por_piso": "Rende mais em asfalto, asfalto sujo e ponte de madeira; perde em lama, neve, gelo e areia.",
+   "borracha_nota": "borracha macia: mais aderência, gasta mais rápido",
+   "triangulos": 336,
+   "kb": 53.7,
+   "dimensoes": [
+    0.2391,
+    0.6534,
+    0.6534
+   ],
+   "arquivo": "modelos/pneus/tracado_tangente_m.glb",
+   "textura": "texturas/pneu_tracado_tangente_m.png",
+   "previa": "previas/pneus/tracado_tangente_m.png"
+  },
+  {
+   "id": "tracado_tangente_d",
+   "marca": "Traçado",
+   "nome": "Traçado Tangente D",
+   "linha_de_serie": false,
+   "tipo": "asfalto",
+   "tipo_nome": "Asfalto",
+   "banda": "sulcos longitudinais",
+   "cravos": null,
+   "borracha": "dura",
+   "aro": 15,
+   "largura_mm": 228,
+   "diametro_mm": 653,
+   "uso_por_piso": "Rende mais em asfalto, asfalto sujo e ponte de madeira; perde em lama, neve, gelo e areia.",
+   "borracha_nota": "borracha dura: menos aderência, dura mais",
+   "triangulos": 336,
+   "kb": 53.5,
+   "dimensoes": [
+    0.2391,
+    0.6534,
+    0.6534
+   ],
+   "arquivo": "modelos/pneus/tracado_tangente_d.glb",
+   "textura": "texturas/pneu_tracado_tangente_d.png",
+   "previa": "previas/pneus/tracado_tangente_d.png"
+  },
+  {
+   "id": "pinhao_rodagem_a",
+   "marca": "Pinhão",
+   "nome": "Pinhão Rodagem A",
+   "linha_de_serie": false,
+   "tipo": "asfalto",
+   "tipo_nome": "Asfalto",
+   "banda": "sulcos longitudinais",
+   "cravos": null,
+   "borracha": "dura",
+   "aro": 15,
+   "largura_mm": 228,
+   "diametro_mm": 653,
+   "uso_por_piso": "Rende mais em asfalto, asfalto sujo e ponte de madeira; perde em lama, neve, gelo e areia.",
+   "borracha_nota": "borracha dura: menos aderência, dura mais",
+   "triangulos": 336,
+   "kb": 52,
+   "dimensoes": [
+    0.2391,
+    0.6534,
+    0.6534
+   ],
+   "arquivo": "modelos/pneus/pinhao_rodagem_a.glb",
+   "textura": "texturas/pneu_pinhao_rodagem_a.png",
+   "previa": "previas/pneus/pinhao_rodagem_a.png"
+  },
+  {
+   "id": "orvalho_lamina",
+   "marca": "Orvalho",
+   "nome": "Orvalho Lâmina d'Água",
+   "linha_de_serie": false,
+   "tipo": "chuva",
+   "tipo_nome": "Chuva",
+   "banda": "sulcos em flecha",
+   "cravos": null,
+   "borracha": "média",
+   "aro": 15,
+   "largura_mm": 219,
+   "diametro_mm": 660,
+   "uso_por_piso": "Rende mais em asfalto, asfalto sujo e ponte de madeira; na média em cascalho, terra e grama; tira água e segura bem na chuva.",
+   "borracha_nota": "borracha média: equilíbrio entre aderência e duração",
+   "triangulos": 336,
+   "kb": 57.4,
+   "dimensoes": [
+    0.2309,
+    0.66,
+    0.66
+   ],
+   "arquivo": "modelos/pneus/orvalho_lamina.glb",
+   "textura": "texturas/pneu_orvalho_lamina.png",
+   "previa": "previas/pneus/orvalho_lamina.png"
+  },
+  {
+   "id": "orvalho_lamina_m",
+   "marca": "Orvalho",
+   "nome": "Orvalho Lâmina d'Água M",
+   "linha_de_serie": false,
+   "tipo": "chuva",
+   "tipo_nome": "Chuva",
+   "banda": "sulcos em flecha",
+   "cravos": null,
+   "borracha": "macia",
+   "aro": 15,
+   "largura_mm": 219,
+   "diametro_mm": 660,
+   "uso_por_piso": "Rende mais em asfalto, asfalto sujo e ponte de madeira; na média em cascalho, terra e grama; tira água e segura bem na chuva.",
+   "borracha_nota": "borracha macia: mais aderência, gasta mais rápido",
+   "triangulos": 336,
+   "kb": 58.1,
+   "dimensoes": [
+    0.2309,
+    0.66,
+    0.66
+   ],
+   "arquivo": "modelos/pneus/orvalho_lamina_m.glb",
+   "textura": "texturas/pneu_orvalho_lamina_m.png",
+   "previa": "previas/pneus/orvalho_lamina_m.png"
+  },
+  {
+   "id": "tracado_tangente_chuva",
+   "marca": "Traçado",
+   "nome": "Traçado Tangente Chuva",
+   "linha_de_serie": false,
+   "tipo": "chuva",
+   "tipo_nome": "Chuva",
+   "banda": "sulcos em flecha",
+   "cravos": null,
+   "borracha": "média",
+   "aro": 15,
+   "largura_mm": 219,
+   "diametro_mm": 660,
+   "uso_por_piso": "Rende mais em asfalto, asfalto sujo e ponte de madeira; na média em cascalho, terra e grama; tira água e segura bem na chuva.",
+   "borracha_nota": "borracha média: equilíbrio entre aderência e duração",
+   "triangulos": 336,
+   "kb": 58.2,
+   "dimensoes": [
+    0.2309,
+    0.66,
+    0.66
+   ],
+   "arquivo": "modelos/pneus/tracado_tangente_chuva.glb",
+   "textura": "texturas/pneu_tracado_tangente_chuva.png",
+   "previa": "previas/pneus/tracado_tangente_chuva.png"
+  },
+  {
+   "id": "pinhao_estradao",
+   "marca": "Pinhão",
+   "nome": "Pinhão Estradão",
+   "linha_de_serie": false,
+   "tipo": "cascalho",
+   "tipo_nome": "Cascalho",
+   "banda": "blocos alternados",
+   "cravos": null,
+   "borracha": "dura",
+   "aro": 15,
+   "largura_mm": 206,
+   "diametro_mm": 667,
+   "uso_por_piso": "Rende mais em cascalho, terra e grama; na média em asfalto sujo, ponte de madeira, lama, gelo, areia e água rasa; aguenta chuva.",
+   "borracha_nota": "borracha dura: menos aderência, dura mais",
+   "triangulos": 576,
+   "kb": 66.6,
+   "dimensoes": [
+    0.217,
+    0.6665,
+    0.6665
+   ],
+   "arquivo": "modelos/pneus/pinhao_estradao.glb",
+   "textura": "texturas/pneu_pinhao_estradao.png",
+   "previa": "previas/pneus/pinhao_estradao.png"
+  },
+  {
+   "id": "saibro_pedregulho_m",
+   "marca": "Saibro",
+   "nome": "Saibro Pedregulho M",
+   "linha_de_serie": false,
+   "tipo": "cascalho",
+   "tipo_nome": "Cascalho",
+   "banda": "blocos alternados",
+   "cravos": null,
+   "borracha": "macia",
+   "aro": 15,
+   "largura_mm": 206,
+   "diametro_mm": 667,
+   "uso_por_piso": "Rende mais em cascalho, terra e grama; na média em asfalto sujo, ponte de madeira, lama, gelo, areia e água rasa; aguenta chuva.",
+   "borracha_nota": "borracha macia: mais aderência, gasta mais rápido",
+   "triangulos": 576,
+   "kb": 68.7,
+   "dimensoes": [
+    0.217,
+    0.6665,
+    0.6665
+   ],
+   "arquivo": "modelos/pneus/saibro_pedregulho_m.glb",
+   "textura": "texturas/pneu_saibro_pedregulho_m.png",
+   "previa": "previas/pneus/saibro_pedregulho_m.png"
+  },
+  {
+   "id": "saibro_pedregulho_d",
+   "marca": "Saibro",
+   "nome": "Saibro Pedregulho D",
+   "linha_de_serie": false,
+   "tipo": "cascalho",
+   "tipo_nome": "Cascalho",
+   "banda": "blocos alternados",
+   "cravos": null,
+   "borracha": "dura",
+   "aro": 15,
+   "largura_mm": 206,
+   "diametro_mm": 667,
+   "uso_por_piso": "Rende mais em cascalho, terra e grama; na média em asfalto sujo, ponte de madeira, lama, gelo, areia e água rasa; aguenta chuva.",
+   "borracha_nota": "borracha dura: menos aderência, dura mais",
+   "triangulos": 576,
+   "kb": 68.6,
+   "dimensoes": [
+    0.217,
+    0.6665,
+    0.6665
+   ],
+   "arquivo": "modelos/pneus/saibro_pedregulho_d.glb",
+   "textura": "texturas/pneu_saibro_pedregulho_d.png",
+   "previa": "previas/pneus/saibro_pedregulho_d.png"
+  },
+  {
+   "id": "saibro_pedregulho_pro",
+   "marca": "Saibro",
+   "nome": "Saibro Pedregulho Pro",
+   "linha_de_serie": false,
+   "tipo": "cascalho",
+   "tipo_nome": "Cascalho",
+   "banda": "blocos alternados",
+   "cravos": null,
+   "borracha": "macia",
+   "aro": 15,
+   "largura_mm": 206,
+   "diametro_mm": 667,
+   "uso_por_piso": "Rende mais em cascalho, terra e grama; na média em asfalto sujo, ponte de madeira, lama, gelo, areia e água rasa; aguenta chuva.",
+   "borracha_nota": "borracha macia: mais aderência, gasta mais rápido",
+   "triangulos": 576,
+   "kb": 69.5,
+   "dimensoes": [
+    0.217,
+    0.6665,
+    0.6665
+   ],
+   "arquivo": "modelos/pneus/saibro_pedregulho_pro.glb",
+   "textura": "texturas/pneu_saibro_pedregulho_pro.png",
+   "previa": "previas/pneus/saibro_pedregulho_pro.png"
+  },
+  {
+   "id": "pinhao_rodagem_t",
+   "marca": "Pinhão",
+   "nome": "Pinhão Rodagem T",
+   "linha_de_serie": false,
+   "tipo": "terra",
+   "tipo_nome": "Terra e misto",
+   "banda": "blocos pequenos com lamelas",
+   "cravos": null,
+   "borracha": "média",
+   "aro": 15,
+   "largura_mm": 215,
+   "diametro_mm": 660,
+   "uso_por_piso": "Rende mais em terra, cascalho, grama e lama; na média em asfalto, asfalto sujo, ponte de madeira, neve, gelo, areia e água rasa; aguenta chuva.",
+   "borracha_nota": "borracha média: equilíbrio entre aderência e duração",
+   "triangulos": 1776,
+   "kb": 149,
+   "dimensoes": [
+    0.2257,
+    0.6599,
+    0.6599
+   ],
+   "arquivo": "modelos/pneus/pinhao_rodagem_t.glb",
+   "textura": "texturas/pneu_pinhao_rodagem_t.png",
+   "previa": "previas/pneus/pinhao_rodagem_t.png"
+  },
+  {
+   "id": "saibro_chao_batido",
+   "marca": "Saibro",
+   "nome": "Saibro Chão Batido",
+   "linha_de_serie": false,
+   "tipo": "terra",
+   "tipo_nome": "Terra e misto",
+   "banda": "blocos pequenos com lamelas",
+   "cravos": null,
+   "borracha": "média",
+   "aro": 15,
+   "largura_mm": 215,
+   "diametro_mm": 660,
+   "uso_por_piso": "Rende mais em terra, cascalho, grama e lama; na média em asfalto, asfalto sujo, ponte de madeira, neve, gelo, areia e água rasa; aguenta chuva.",
+   "borracha_nota": "borracha média: equilíbrio entre aderência e duração",
+   "triangulos": 1776,
+   "kb": 149.7,
+   "dimensoes": [
+    0.2257,
+    0.6599,
+    0.6599
+   ],
+   "arquivo": "modelos/pneus/saibro_chao_batido.glb",
+   "textura": "texturas/pneu_saibro_chao_batido.png",
+   "previa": "previas/pneus/saibro_chao_batido.png"
+  },
+  {
+   "id": "orvalho_mata_fechada",
+   "marca": "Orvalho",
+   "nome": "Orvalho Mata Fechada",
+   "linha_de_serie": false,
+   "tipo": "terra",
+   "tipo_nome": "Terra e misto",
+   "banda": "blocos pequenos com lamelas",
+   "cravos": null,
+   "borracha": "macia",
+   "aro": 15,
+   "largura_mm": 215,
+   "diametro_mm": 660,
+   "uso_por_piso": "Rende mais em terra, cascalho, grama e lama; na média em asfalto, asfalto sujo, ponte de madeira, neve, gelo, areia e água rasa; aguenta chuva.",
+   "borracha_nota": "borracha macia: mais aderência, gasta mais rápido",
+   "triangulos": 1776,
+   "kb": 151.7,
+   "dimensoes": [
+    0.2257,
+    0.6599,
+    0.6599
+   ],
+   "arquivo": "modelos/pneus/orvalho_mata_fechada.glb",
+   "textura": "texturas/pneu_orvalho_mata_fechada.png",
+   "previa": "previas/pneus/orvalho_mata_fechada.png"
+  },
+  {
+   "id": "saibro_chao_batido_r",
+   "marca": "Saibro",
+   "nome": "Saibro Chão Batido R",
+   "linha_de_serie": false,
+   "tipo": "terra",
+   "tipo_nome": "Terra e misto",
+   "banda": "blocos pequenos com lamelas",
+   "cravos": null,
+   "borracha": "macia",
+   "aro": 15,
+   "largura_mm": 215,
+   "diametro_mm": 660,
+   "uso_por_piso": "Rende mais em terra, cascalho, grama e lama; na média em asfalto, asfalto sujo, ponte de madeira, neve, gelo, areia e água rasa; aguenta chuva.",
+   "borracha_nota": "borracha macia: mais aderência, gasta mais rápido",
+   "triangulos": 1776,
+   "kb": 150.5,
+   "dimensoes": [
+    0.2257,
+    0.6599,
+    0.6599
+   ],
+   "arquivo": "modelos/pneus/saibro_chao_batido_r.glb",
+   "textura": "texturas/pneu_saibro_chao_batido_r.png",
+   "previa": "previas/pneus/saibro_chao_batido_r.png"
+  },
+  {
+   "id": "tropeiro_atolado",
+   "marca": "Tropeiro",
+   "nome": "Tropeiro Atolado",
+   "linha_de_serie": false,
+   "tipo": "lama",
+   "tipo_nome": "Lama",
+   "banda": "garras altas em V",
+   "cravos": null,
+   "borracha": "média",
+   "aro": 15,
+   "largura_mm": 181,
+   "diametro_mm": 677,
+   "uso_por_piso": "Rende mais em lama, água rasa, grama e terra; na média em cascalho e neve; perde em asfalto; aguenta chuva.",
+   "borracha_nota": "borracha média: equilíbrio entre aderência e duração",
+   "triangulos": 576,
+   "kb": 67.6,
+   "dimensoes": [
+    0.1901,
+    0.6747,
+    0.6747
+   ],
+   "arquivo": "modelos/pneus/tropeiro_atolado.glb",
+   "textura": "texturas/pneu_tropeiro_atolado.png",
+   "previa": "previas/pneus/tropeiro_atolado.png"
+  },
+  {
+   "id": "saibro_barreiro",
+   "marca": "Saibro",
+   "nome": "Saibro Barreiro",
+   "linha_de_serie": false,
+   "tipo": "lama",
+   "tipo_nome": "Lama",
+   "banda": "garras altas em V",
+   "cravos": null,
+   "borracha": "dura",
+   "aro": 15,
+   "largura_mm": 181,
+   "diametro_mm": 677,
+   "uso_por_piso": "Rende mais em lama, água rasa, grama e terra; na média em cascalho e neve; perde em asfalto; aguenta chuva.",
+   "borracha_nota": "borracha dura: menos aderência, dura mais",
+   "triangulos": 576,
+   "kb": 66.6,
+   "dimensoes": [
+    0.1901,
+    0.6747,
+    0.6747
+   ],
+   "arquivo": "modelos/pneus/saibro_barreiro.glb",
+   "textura": "texturas/pneu_saibro_barreiro.png",
+   "previa": "previas/pneus/saibro_barreiro.png"
+  },
+  {
+   "id": "tropeiro_atolado_pro",
+   "marca": "Tropeiro",
+   "nome": "Tropeiro Atolado Pro",
+   "linha_de_serie": false,
+   "tipo": "lama",
+   "tipo_nome": "Lama",
+   "banda": "garras altas em V",
+   "cravos": null,
+   "borracha": "macia",
+   "aro": 15,
+   "largura_mm": 181,
+   "diametro_mm": 677,
+   "uso_por_piso": "Rende mais em lama, água rasa, grama e terra; na média em cascalho e neve; perde em asfalto; aguenta chuva.",
+   "borracha_nota": "borracha macia: mais aderência, gasta mais rápido",
+   "triangulos": 576,
+   "kb": 69.3,
+   "dimensoes": [
+    0.1901,
+    0.6747,
+    0.6747
+   ],
+   "arquivo": "modelos/pneus/tropeiro_atolado_pro.glb",
+   "textura": "texturas/pneu_tropeiro_atolado_pro.png",
+   "previa": "previas/pneus/tropeiro_atolado_pro.png"
+  },
+  {
+   "id": "pinhao_inverno",
+   "marca": "Pinhão",
+   "nome": "Pinhão Inverno",
+   "linha_de_serie": false,
+   "tipo": "neve",
+   "tipo_nome": "Neve com cravos",
+   "banda": "blocos com lamelas",
+   "cravos": "curtos",
+   "borracha": "média",
+   "aro": 15,
+   "largura_mm": 185,
+   "diametro_mm": 670,
+   "uso_por_piso": "Rende mais em gelo e neve; na média em terra; perde em asfalto e asfalto sujo.",
+   "borracha_nota": "borracha média: equilíbrio entre aderência e duração",
+   "triangulos": 1776,
+   "kb": 148.5,
+   "dimensoes": [
+    0.1957,
+    0.6698,
+    0.6698
+   ],
+   "arquivo": "modelos/pneus/pinhao_inverno.glb",
+   "textura": "texturas/pneu_pinhao_inverno.png",
+   "previa": "previas/pneus/pinhao_inverno.png"
+  },
+  {
+   "id": "geada_cristal",
+   "marca": "Geada",
+   "nome": "Geada Cristal",
+   "linha_de_serie": false,
+   "tipo": "neve",
+   "tipo_nome": "Neve com cravos",
+   "banda": "blocos com lamelas",
+   "cravos": "curtos",
+   "borracha": "média",
+   "aro": 15,
+   "largura_mm": 185,
+   "diametro_mm": 670,
+   "uso_por_piso": "Rende mais em gelo e neve; na média em terra; perde em asfalto e asfalto sujo.",
+   "borracha_nota": "borracha média: equilíbrio entre aderência e duração",
+   "triangulos": 1776,
+   "kb": 148,
+   "dimensoes": [
+    0.1957,
+    0.6698,
+    0.6698
+   ],
+   "arquivo": "modelos/pneus/geada_cristal.glb",
+   "textura": "texturas/pneu_geada_cristal.png",
+   "previa": "previas/pneus/geada_cristal.png"
+  },
+  {
+   "id": "geada_cristal_pro",
+   "marca": "Geada",
+   "nome": "Geada Cristal Pro",
+   "linha_de_serie": false,
+   "tipo": "neve",
+   "tipo_nome": "Neve com cravos",
+   "banda": "blocos com lamelas",
+   "cravos": "curtos",
+   "borracha": "macia",
+   "aro": 15,
+   "largura_mm": 185,
+   "diametro_mm": 670,
+   "uso_por_piso": "Rende mais em gelo e neve; na média em terra; perde em asfalto e asfalto sujo.",
+   "borracha_nota": "borracha macia: mais aderência, gasta mais rápido",
+   "triangulos": 1776,
+   "kb": 149.9,
+   "dimensoes": [
+    0.1957,
+    0.6698,
+    0.6698
+   ],
+   "arquivo": "modelos/pneus/geada_cristal_pro.glb",
+   "textura": "texturas/pneu_geada_cristal_pro.png",
+   "previa": "previas/pneus/geada_cristal_pro.png"
+  },
+  {
+   "id": "orvalho_escarcha",
+   "marca": "Orvalho",
+   "nome": "Orvalho Escarcha",
+   "linha_de_serie": false,
+   "tipo": "gelo",
+   "tipo_nome": "Gelo (cravo longo)",
+   "banda": "blocos com lamelas",
+   "cravos": "longos",
+   "borracha": "média",
+   "aro": 15,
+   "largura_mm": 176,
+   "diametro_mm": 667,
+   "uso_por_piso": "Rende mais em gelo e neve; perde em asfalto, asfalto sujo e ponte de madeira.",
+   "borracha_nota": "borracha média: equilíbrio entre aderência e duração",
+   "triangulos": 1776,
+   "kb": 153.5,
+   "dimensoes": [
+    0.1874,
+    0.6665,
+    0.6665
+   ],
+   "arquivo": "modelos/pneus/orvalho_escarcha.glb",
+   "textura": "texturas/pneu_orvalho_escarcha.png",
+   "previa": "previas/pneus/orvalho_escarcha.png"
+  },
+  {
+   "id": "geada_prego_longo",
+   "marca": "Geada",
+   "nome": "Geada Prego Longo",
+   "linha_de_serie": false,
+   "tipo": "gelo",
+   "tipo_nome": "Gelo (cravo longo)",
+   "banda": "blocos com lamelas",
+   "cravos": "longos",
+   "borracha": "média",
+   "aro": 15,
+   "largura_mm": 176,
+   "diametro_mm": 667,
+   "uso_por_piso": "Rende mais em gelo e neve; perde em asfalto, asfalto sujo e ponte de madeira.",
+   "borracha_nota": "borracha média: equilíbrio entre aderência e duração",
+   "triangulos": 1776,
+   "kb": 153.2,
+   "dimensoes": [
+    0.1874,
+    0.6665,
+    0.6665
+   ],
+   "arquivo": "modelos/pneus/geada_prego_longo.glb",
+   "textura": "texturas/pneu_geada_prego_longo.png",
+   "previa": "previas/pneus/geada_prego_longo.png"
+  },
+  {
+   "id": "geada_prego_longo_pro",
+   "marca": "Geada",
+   "nome": "Geada Prego Longo Pro",
+   "linha_de_serie": false,
+   "tipo": "gelo",
+   "tipo_nome": "Gelo (cravo longo)",
+   "banda": "blocos com lamelas",
+   "cravos": "longos",
+   "borracha": "macia",
+   "aro": 15,
+   "largura_mm": 176,
+   "diametro_mm": 667,
+   "uso_por_piso": "Rende mais em gelo e neve; perde em asfalto, asfalto sujo e ponte de madeira.",
+   "borracha_nota": "borracha macia: mais aderência, gasta mais rápido",
+   "triangulos": 1776,
+   "kb": 155,
+   "dimensoes": [
+    0.1874,
+    0.6665,
+    0.6665
+   ],
+   "arquivo": "modelos/pneus/geada_prego_longo_pro.glb",
+   "textura": "texturas/pneu_geada_prego_longo_pro.png",
+   "previa": "previas/pneus/geada_prego_longo_pro.png"
+  },
+  {
+   "id": "pinhao_rodagem_areia",
+   "marca": "Pinhão",
+   "nome": "Pinhão Rodagem Areia",
+   "linha_de_serie": false,
+   "tipo": "areia",
+   "tipo_nome": "Areia",
+   "banda": "pás transversais",
+   "cravos": null,
+   "borracha": "dura",
+   "aro": 15,
+   "largura_mm": 241,
+   "diametro_mm": 673,
+   "uso_por_piso": "Rende mais em areia e cascalho; na média em asfalto sujo, ponte de madeira, terra, grama, lama, neve, gelo e água rasa.",
+   "borracha_nota": "borracha dura: menos aderência, dura mais",
+   "triangulos": 456,
+   "kb": 60.8,
+   "dimensoes": [
+    0.2513,
+    0.672,
+    0.672
+   ],
+   "arquivo": "modelos/pneus/pinhao_rodagem_areia.glb",
+   "textura": "texturas/pneu_pinhao_rodagem_areia.png",
+   "previa": "previas/pneus/pinhao_rodagem_areia.png"
+  },
+  {
+   "id": "dunar_areiao",
+   "marca": "Dunar",
+   "nome": "Dunar Areião",
+   "linha_de_serie": false,
+   "tipo": "areia",
+   "tipo_nome": "Areia",
+   "banda": "pás transversais",
+   "cravos": null,
+   "borracha": "média",
+   "aro": 15,
+   "largura_mm": 241,
+   "diametro_mm": 673,
+   "uso_por_piso": "Rende mais em areia e cascalho; na média em asfalto sujo, ponte de madeira, terra, grama, lama, neve, gelo e água rasa.",
+   "borracha_nota": "borracha média: equilíbrio entre aderência e duração",
+   "triangulos": 456,
+   "kb": 56.4,
+   "dimensoes": [
+    0.2513,
+    0.672,
+    0.672
+   ],
+   "arquivo": "modelos/pneus/dunar_areiao.glb",
+   "textura": "texturas/pneu_dunar_areiao.png",
+   "previa": "previas/pneus/dunar_areiao.png"
+  },
+  {
+   "id": "dunar_miragem",
+   "marca": "Dunar",
+   "nome": "Dunar Miragem",
+   "linha_de_serie": false,
+   "tipo": "areia",
+   "tipo_nome": "Areia",
+   "banda": "pás transversais",
+   "cravos": null,
+   "borracha": "dura",
+   "aro": 15,
+   "largura_mm": 241,
+   "diametro_mm": 673,
+   "uso_por_piso": "Rende mais em areia e cascalho; na média em asfalto sujo, ponte de madeira, terra, grama, lama, neve, gelo e água rasa.",
+   "borracha_nota": "borracha dura: menos aderência, dura mais",
+   "triangulos": 456,
+   "kb": 57.8,
+   "dimensoes": [
+    0.2513,
+    0.672,
+    0.672
+   ],
+   "arquivo": "modelos/pneus/dunar_miragem.glb",
+   "textura": "texturas/pneu_dunar_miragem.png",
+   "previa": "previas/pneus/dunar_miragem.png"
+  },
+  {
+   "id": "dunar_areiao_pro",
+   "marca": "Dunar",
+   "nome": "Dunar Areião Pro",
+   "linha_de_serie": false,
+   "tipo": "areia",
+   "tipo_nome": "Areia",
+   "banda": "pás transversais",
+   "cravos": null,
+   "borracha": "macia",
+   "aro": 15,
+   "largura_mm": 241,
+   "diametro_mm": 673,
+   "uso_por_piso": "Rende mais em areia e cascalho; na média em asfalto sujo, ponte de madeira, terra, grama, lama, neve, gelo e água rasa.",
+   "borracha_nota": "borracha macia: mais aderência, gasta mais rápido",
+   "triangulos": 456,
+   "kb": 58.5,
+   "dimensoes": [
+    0.2513,
+    0.672,
+    0.672
+   ],
+   "arquivo": "modelos/pneus/dunar_areiao_pro.glb",
+   "textura": "texturas/pneu_dunar_areiao_pro.png",
+   "previa": "previas/pneus/dunar_areiao_pro.png"
+  },
+  {
+   "id": "serie_misto",
+   "marca": "Série",
+   "nome": "Série misto",
+   "linha_de_serie": true,
+   "tipo": "terra",
+   "tipo_nome": "Terra e misto",
+   "banda": "blocos pequenos com lamelas",
+   "cravos": null,
+   "borracha": "média",
+   "aro": 15,
+   "largura_mm": 215,
+   "diametro_mm": 660,
+   "uso_por_piso": "Rende mais em terra, cascalho, grama e lama; na média em asfalto, asfalto sujo, ponte de madeira, neve, gelo, areia e água rasa; aguenta chuva.",
+   "borracha_nota": "borracha média: equilíbrio entre aderência e duração",
+   "triangulos": 1776,
+   "kb": 145,
+   "dimensoes": [
+    0.2257,
+    0.6599,
+    0.6599
+   ],
+   "arquivo": "modelos/pneus/serie_misto.glb",
+   "textura": "texturas/pneu_serie_misto.png",
+   "previa": "previas/pneus/serie_misto.png"
+  },
+  {
+   "id": "serie_asfalto",
+   "marca": "Série",
+   "nome": "Série asfalto",
+   "linha_de_serie": true,
+   "tipo": "asfalto",
+   "tipo_nome": "Asfalto",
+   "banda": "sulcos longitudinais",
+   "cravos": null,
+   "borracha": "média",
+   "aro": 15,
+   "largura_mm": 228,
+   "diametro_mm": 653,
+   "uso_por_piso": "Rende mais em asfalto, asfalto sujo e ponte de madeira; perde em lama, neve, gelo e areia.",
+   "borracha_nota": "borracha média: equilíbrio entre aderência e duração",
+   "triangulos": 336,
+   "kb": 48.6,
+   "dimensoes": [
+    0.2391,
+    0.6534,
+    0.6534
+   ],
+   "arquivo": "modelos/pneus/serie_asfalto.glb",
+   "textura": "texturas/pneu_serie_asfalto.png",
+   "previa": "previas/pneus/serie_asfalto.png"
+  },
+  {
+   "id": "serie_chuva",
+   "marca": "Série",
+   "nome": "Série chuva",
+   "linha_de_serie": true,
+   "tipo": "chuva",
+   "tipo_nome": "Chuva",
+   "banda": "sulcos em flecha",
+   "cravos": null,
+   "borracha": "média",
+   "aro": 15,
+   "largura_mm": 219,
+   "diametro_mm": 660,
+   "uso_por_piso": "Rende mais em asfalto, asfalto sujo e ponte de madeira; na média em cascalho, terra e grama; tira água e segura bem na chuva.",
+   "borracha_nota": "borracha média: equilíbrio entre aderência e duração",
+   "triangulos": 336,
+   "kb": 50.3,
+   "dimensoes": [
+    0.2309,
+    0.66,
+    0.66
+   ],
+   "arquivo": "modelos/pneus/serie_chuva.glb",
+   "textura": "texturas/pneu_serie_chuva.png",
+   "previa": "previas/pneus/serie_chuva.png"
+  },
+  {
+   "id": "serie_cascalho",
+   "marca": "Série",
+   "nome": "Série cascalho",
+   "linha_de_serie": true,
+   "tipo": "cascalho",
+   "tipo_nome": "Cascalho",
+   "banda": "blocos alternados",
+   "cravos": null,
+   "borracha": "média",
+   "aro": 15,
+   "largura_mm": 206,
+   "diametro_mm": 667,
+   "uso_por_piso": "Rende mais em cascalho, terra e grama; na média em asfalto sujo, ponte de madeira, lama, gelo, areia e água rasa; aguenta chuva.",
+   "borracha_nota": "borracha média: equilíbrio entre aderência e duração",
+   "triangulos": 576,
+   "kb": 64.5,
+   "dimensoes": [
+    0.217,
+    0.6665,
+    0.6665
+   ],
+   "arquivo": "modelos/pneus/serie_cascalho.glb",
+   "textura": "texturas/pneu_serie_cascalho.png",
+   "previa": "previas/pneus/serie_cascalho.png"
+  },
+  {
+   "id": "serie_lama",
+   "marca": "Série",
+   "nome": "Série lama",
+   "linha_de_serie": true,
+   "tipo": "lama",
+   "tipo_nome": "Lama",
+   "banda": "garras altas em V",
+   "cravos": null,
+   "borracha": "média",
+   "aro": 15,
+   "largura_mm": 181,
+   "diametro_mm": 677,
+   "uso_por_piso": "Rende mais em lama, água rasa, grama e terra; na média em cascalho e neve; perde em asfalto; aguenta chuva.",
+   "borracha_nota": "borracha média: equilíbrio entre aderência e duração",
+   "triangulos": 576,
+   "kb": 62.4,
+   "dimensoes": [
+    0.1901,
+    0.6747,
+    0.6747
+   ],
+   "arquivo": "modelos/pneus/serie_lama.glb",
+   "textura": "texturas/pneu_serie_lama.png",
+   "previa": "previas/pneus/serie_lama.png"
+  },
+  {
+   "id": "serie_neve",
+   "marca": "Série",
+   "nome": "Série neve com cravos",
+   "linha_de_serie": true,
+   "tipo": "neve",
+   "tipo_nome": "Neve com cravos",
+   "banda": "blocos com lamelas",
+   "cravos": "curtos",
+   "borracha": "média",
+   "aro": 15,
+   "largura_mm": 185,
+   "diametro_mm": 670,
+   "uso_por_piso": "Rende mais em gelo e neve; na média em terra; perde em asfalto e asfalto sujo.",
+   "borracha_nota": "borracha média: equilíbrio entre aderência e duração",
+   "triangulos": 1776,
+   "kb": 150.5,
+   "dimensoes": [
+    0.1957,
+    0.6698,
+    0.6698
+   ],
+   "arquivo": "modelos/pneus/serie_neve.glb",
+   "textura": "texturas/pneu_serie_neve.png",
+   "previa": "previas/pneus/serie_neve.png"
+  },
+  {
+   "id": "serie_areia",
+   "marca": "Série",
+   "nome": "Série areia",
+   "linha_de_serie": true,
+   "tipo": "areia",
+   "tipo_nome": "Areia",
+   "banda": "pás transversais",
+   "cravos": null,
+   "borracha": "média",
+   "aro": 15,
+   "largura_mm": 241,
+   "diametro_mm": 673,
+   "uso_por_piso": "Rende mais em areia e cascalho; na média em asfalto sujo, ponte de madeira, terra, grama, lama, neve, gelo e água rasa.",
+   "borracha_nota": "borracha média: equilíbrio entre aderência e duração",
+   "triangulos": 456,
+   "kb": 54.4,
+   "dimensoes": [
+    0.2513,
+    0.672,
+    0.672
+   ],
+   "arquivo": "modelos/pneus/serie_areia.glb",
+   "textura": "texturas/pneu_serie_areia.png",
+   "previa": "previas/pneus/serie_areia.png"
+  }
+ ],
+ "conjuntos": [
+  {
+   "id": "bigorna_estampada_13_com_pinhao_estradao",
+   "roda": "bigorna_estampada_13",
+   "pneu": "pinhao_estradao",
+   "aro": 13,
+   "tipo": "cascalho",
+   "descricao": "Bigorna Estampada 13\" com Pinhão Estradão (cascalho)",
+   "triangulos": 672,
+   "kb": 96.5,
+   "dimensoes": [
+    0.2204,
+    0.6665,
+    0.6665
+   ],
+   "arquivo": "modelos/conjuntos/bigorna_estampada_13_com_pinhao_estradao.glb",
+   "arquivo_direita": "modelos/conjuntos/bigorna_estampada_13_com_pinhao_estradao_direita.glb",
+   "previa": "previas/conjuntos/bigorna_estampada_13_com_pinhao_estradao.png"
+  },
+  {
+   "id": "bigorna_estampada_15_com_pinhao_rodagem_t",
+   "roda": "bigorna_estampada_15",
+   "pneu": "pinhao_rodagem_t",
+   "aro": 15,
+   "tipo": "terra",
+   "descricao": "Bigorna Estampada 15\" com Pinhão Rodagem T (terra e misto)",
+   "triangulos": 1872,
+   "kb": 178.8,
+   "dimensoes": [
+    0.2257,
+    0.6599,
+    0.6599
+   ],
+   "arquivo": "modelos/conjuntos/bigorna_estampada_15_com_pinhao_rodagem_t.glb",
+   "arquivo_direita": "modelos/conjuntos/bigorna_estampada_15_com_pinhao_rodagem_t_direita.glb",
+   "previa": "previas/conjuntos/bigorna_estampada_15_com_pinhao_rodagem_t.png"
+  },
+  {
+   "id": "bigorna_reforcada_14_com_tropeiro_atolado",
+   "roda": "bigorna_reforcada_14",
+   "pneu": "tropeiro_atolado",
+   "aro": 14,
+   "tipo": "lama",
+   "descricao": "Bigorna Reforçada de Rali 14\" com Tropeiro Atolado (lama)",
+   "triangulos": 672,
+   "kb": 95,
+   "dimensoes": [
+    0.1918,
+    0.6747,
+    0.6747
+   ],
+   "arquivo": "modelos/conjuntos/bigorna_reforcada_14_com_tropeiro_atolado.glb",
+   "arquivo_direita": "modelos/conjuntos/bigorna_reforcada_14_com_tropeiro_atolado_direita.glb",
+   "previa": "previas/conjuntos/bigorna_reforcada_14_com_tropeiro_atolado.png"
+  },
+  {
+   "id": "bigorna_reforcada_16_com_pinhao_inverno",
+   "roda": "bigorna_reforcada_16",
+   "pneu": "pinhao_inverno",
+   "aro": 16,
+   "tipo": "neve",
+   "descricao": "Bigorna Reforçada de Rali 16\" com Pinhão Inverno (neve com cravos)",
+   "triangulos": 1872,
+   "kb": 175.9,
+   "dimensoes": [
+    0.194,
+    0.6698,
+    0.6698
+   ],
+   "arquivo": "modelos/conjuntos/bigorna_reforcada_16_com_pinhao_inverno.glb",
+   "arquivo_direita": "modelos/conjuntos/bigorna_reforcada_16_com_pinhao_inverno_direita.glb",
+   "previa": "previas/conjuntos/bigorna_reforcada_16_com_pinhao_inverno.png"
+  },
+  {
+   "id": "bigorna_ventilada_15_com_saibro_pedregulho_m",
+   "roda": "bigorna_ventilada_15",
+   "pneu": "saibro_pedregulho_m",
+   "aro": 15,
+   "tipo": "cascalho",
+   "descricao": "Bigorna Ventilada Branca 15\" com Saibro Pedregulho M (cascalho)",
+   "triangulos": 672,
+   "kb": 96.7,
+   "dimensoes": [
+    0.217,
+    0.6665,
+    0.6665
+   ],
+   "arquivo": "modelos/conjuntos/bigorna_ventilada_15_com_saibro_pedregulho_m.glb",
+   "arquivo_direita": "modelos/conjuntos/bigorna_ventilada_15_com_saibro_pedregulho_m_direita.glb",
+   "previa": "previas/conjuntos/bigorna_ventilada_15_com_saibro_pedregulho_m.png"
+  },
+  {
+   "id": "quebramola_estrela_13_com_tracado_tangente_m",
+   "roda": "quebramola_estrela_13",
+   "pneu": "tracado_tangente_m",
+   "aro": 13,
+   "tipo": "asfalto",
+   "descricao": "Quebra-Mola Estrela 13\" com Traçado Tangente M (asfalto)",
+   "triangulos": 432,
+   "kb": 88.4,
+   "dimensoes": [
+    0.2419,
+    0.6534,
+    0.6534
+   ],
+   "arquivo": "modelos/conjuntos/quebramola_estrela_13_com_tracado_tangente_m.glb",
+   "arquivo_direita": "modelos/conjuntos/quebramola_estrela_13_com_tracado_tangente_m_direita.glb",
+   "previa": "previas/conjuntos/quebramola_estrela_13_com_tracado_tangente_m.png"
+  },
+  {
+   "id": "quebramola_estrela_15_com_orvalho_lamina",
+   "roda": "quebramola_estrela_15",
+   "pneu": "orvalho_lamina",
+   "aro": 15,
+   "tipo": "chuva",
+   "descricao": "Quebra-Mola Estrela 15\" com Orvalho Lâmina d'Água (chuva)",
+   "triangulos": 432,
+   "kb": 92.1,
+   "dimensoes": [
+    0.2309,
+    0.66,
+    0.66
+   ],
+   "arquivo": "modelos/conjuntos/quebramola_estrela_15_com_orvalho_lamina.glb",
+   "arquivo_direita": "modelos/conjuntos/quebramola_estrela_15_com_orvalho_lamina_direita.glb",
+   "previa": "previas/conjuntos/quebramola_estrela_15_com_orvalho_lamina.png"
+  },
+  {
+   "id": "quebramola_malha_14_com_tracado_tangente_d",
+   "roda": "quebramola_malha_14",
+   "pneu": "tracado_tangente_d",
+   "aro": 14,
+   "tipo": "asfalto",
+   "descricao": "Quebra-Mola Malha 14\" com Traçado Tangente D (asfalto)",
+   "triangulos": 432,
+   "kb": 95.3,
+   "dimensoes": [
+    0.2409,
+    0.6534,
+    0.6534
+   ],
+   "arquivo": "modelos/conjuntos/quebramola_malha_14_com_tracado_tangente_d.glb",
+   "arquivo_direita": "modelos/conjuntos/quebramola_malha_14_com_tracado_tangente_d_direita.glb",
+   "previa": "previas/conjuntos/quebramola_malha_14_com_tracado_tangente_d.png"
+  },
+  {
+   "id": "quebramola_malha_16_com_tracado_reta_final",
+   "roda": "quebramola_malha_16",
+   "pneu": "tracado_reta_final",
+   "aro": 16,
+   "tipo": "slick",
+   "descricao": "Quebra-Mola Malha 16\" com Traçado Reta Final (slick)",
+   "triangulos": 432,
+   "kb": 93.4,
+   "dimensoes": [
+    0.2456,
+    0.6468,
+    0.6468
+   ],
+   "arquivo": "modelos/conjuntos/quebramola_malha_16_com_tracado_reta_final.glb",
+   "arquivo_direita": "modelos/conjuntos/quebramola_malha_16_com_tracado_reta_final_direita.glb",
+   "previa": "previas/conjuntos/quebramola_malha_16_com_tracado_reta_final.png"
+  },
+  {
+   "id": "quebramola_turbina_17_com_orvalho_lamina_m",
+   "roda": "quebramola_turbina_17",
+   "pneu": "orvalho_lamina_m",
+   "aro": 17,
+   "tipo": "chuva",
+   "descricao": "Quebra-Mola Turbina 17\" com Orvalho Lâmina d'Água M (chuva)",
+   "triangulos": 432,
+   "kb": 88.6,
+   "dimensoes": [
+    0.2275,
+    0.66,
+    0.66
+   ],
+   "arquivo": "modelos/conjuntos/quebramola_turbina_17_com_orvalho_lamina_m.glb",
+   "arquivo_direita": "modelos/conjuntos/quebramola_turbina_17_com_orvalho_lamina_m_direita.glb",
+   "previa": "previas/conjuntos/quebramola_turbina_17_com_orvalho_lamina_m.png"
+  },
+  {
+   "id": "aroeira_seis_14_com_saibro_pedregulho_d",
+   "roda": "aroeira_seis_14",
+   "pneu": "saibro_pedregulho_d",
+   "aro": 14,
+   "tipo": "cascalho",
+   "descricao": "Aroeira Seis Raios 14\" com Saibro Pedregulho D (cascalho)",
+   "triangulos": 672,
+   "kb": 101.5,
+   "dimensoes": [
+    0.2187,
+    0.6665,
+    0.6665
+   ],
+   "arquivo": "modelos/conjuntos/aroeira_seis_14_com_saibro_pedregulho_d.glb",
+   "arquivo_direita": "modelos/conjuntos/aroeira_seis_14_com_saibro_pedregulho_d_direita.glb",
+   "previa": "previas/conjuntos/aroeira_seis_14_com_saibro_pedregulho_d.png"
+  },
+  {
+   "id": "aroeira_seis_15_com_saibro_chao_batido",
+   "roda": "aroeira_seis_15",
+   "pneu": "saibro_chao_batido",
+   "aro": 15,
+   "tipo": "terra",
+   "descricao": "Aroeira Seis Raios 15\" com Saibro Chão Batido (terra e misto)",
+   "triangulos": 1872,
+   "kb": 182.6,
+   "dimensoes": [
+    0.2257,
+    0.6599,
+    0.6599
+   ],
+   "arquivo": "modelos/conjuntos/aroeira_seis_15_com_saibro_chao_batido.glb",
+   "arquivo_direita": "modelos/conjuntos/aroeira_seis_15_com_saibro_chao_batido_direita.glb",
+   "previa": "previas/conjuntos/aroeira_seis_15_com_saibro_chao_batido.png"
+  },
+  {
+   "id": "aroeira_cinco_15_com_saibro_pedregulho_pro",
+   "roda": "aroeira_cinco_15",
+   "pneu": "saibro_pedregulho_pro",
+   "aro": 15,
+   "tipo": "cascalho",
+   "descricao": "Aroeira Cinco Largos 15\" com Saibro Pedregulho Pro (cascalho)",
+   "triangulos": 672,
+   "kb": 103.8,
+   "dimensoes": [
+    0.217,
+    0.6665,
+    0.6665
+   ],
+   "arquivo": "modelos/conjuntos/aroeira_cinco_15_com_saibro_pedregulho_pro.glb",
+   "arquivo_direita": "modelos/conjuntos/aroeira_cinco_15_com_saibro_pedregulho_pro_direita.glb",
+   "previa": "previas/conjuntos/aroeira_cinco_15_com_saibro_pedregulho_pro.png"
+  },
+  {
+   "id": "aroeira_cinco_17_com_saibro_barreiro",
+   "roda": "aroeira_cinco_17",
+   "pneu": "saibro_barreiro",
+   "aro": 17,
+   "tipo": "lama",
+   "descricao": "Aroeira Cinco Largos 17\" com Saibro Barreiro (lama)",
+   "triangulos": 672,
+   "kb": 100.8,
+   "dimensoes": [
+    0.1867,
+    0.6747,
+    0.6747
+   ],
+   "arquivo": "modelos/conjuntos/aroeira_cinco_17_com_saibro_barreiro.glb",
+   "arquivo_direita": "modelos/conjuntos/aroeira_cinco_17_com_saibro_barreiro_direita.glb",
+   "previa": "previas/conjuntos/aroeira_cinco_17_com_saibro_barreiro.png"
+  },
+  {
+   "id": "aroeira_doze_16_com_orvalho_mata_fechada",
+   "roda": "aroeira_doze_16",
+   "pneu": "orvalho_mata_fechada",
+   "aro": 16,
+   "tipo": "terra",
+   "descricao": "Aroeira Doze Raios 16\" com Orvalho Mata Fechada (terra e misto)",
+   "triangulos": 1872,
+   "kb": 192.3,
+   "dimensoes": [
+    0.224,
+    0.6599,
+    0.6599
+   ],
+   "arquivo": "modelos/conjuntos/aroeira_doze_16_com_orvalho_mata_fechada.glb",
+   "arquivo_direita": "modelos/conjuntos/aroeira_doze_16_com_orvalho_mata_fechada_direita.glb",
+   "previa": "previas/conjuntos/aroeira_doze_16_com_orvalho_mata_fechada.png"
+  },
+  {
+   "id": "lumiar_dez_14_com_saibro_chao_batido_r",
+   "roda": "lumiar_dez_14",
+   "pneu": "saibro_chao_batido_r",
+   "aro": 14,
+   "tipo": "terra",
+   "descricao": "Lumiar Dez Raios 14\" com Saibro Chão Batido R (terra e misto)",
+   "triangulos": 1872,
+   "kb": 189.5,
+   "dimensoes": [
+    0.2274,
+    0.6599,
+    0.6599
+   ],
+   "arquivo": "modelos/conjuntos/lumiar_dez_14_com_saibro_chao_batido_r.glb",
+   "arquivo_direita": "modelos/conjuntos/lumiar_dez_14_com_saibro_chao_batido_r_direita.glb",
+   "previa": "previas/conjuntos/lumiar_dez_14_com_saibro_chao_batido_r.png"
+  },
+  {
+   "id": "lumiar_dez_15_com_pinhao_estradao",
+   "roda": "lumiar_dez_15",
+   "pneu": "pinhao_estradao",
+   "aro": 15,
+   "tipo": "cascalho",
+   "descricao": "Lumiar Dez Raios 15\" com Pinhão Estradão (cascalho)",
+   "triangulos": 672,
+   "kb": 105.7,
+   "dimensoes": [
+    0.217,
+    0.6665,
+    0.6665
+   ],
+   "arquivo": "modelos/conjuntos/lumiar_dez_15_com_pinhao_estradao.glb",
+   "arquivo_direita": "modelos/conjuntos/lumiar_dez_15_com_pinhao_estradao_direita.glb",
+   "previa": "previas/conjuntos/lumiar_dez_15_com_pinhao_estradao.png"
+  },
+  {
+   "id": "lumiar_lamina_15_com_geada_cristal",
+   "roda": "lumiar_lamina_15",
+   "pneu": "geada_cristal",
+   "aro": 15,
+   "tipo": "neve",
+   "descricao": "Lumiar Lâmina 15\" com Geada Cristal (neve com cravos)",
+   "triangulos": 1872,
+   "kb": 184.1,
+   "dimensoes": [
+    0.1957,
+    0.6698,
+    0.6698
+   ],
+   "arquivo": "modelos/conjuntos/lumiar_lamina_15_com_geada_cristal.glb",
+   "arquivo_direita": "modelos/conjuntos/lumiar_lamina_15_com_geada_cristal_direita.glb",
+   "previa": "previas/conjuntos/lumiar_lamina_15_com_geada_cristal.png"
+  },
+  {
+   "id": "lumiar_lamina_17_com_orvalho_escarcha",
+   "roda": "lumiar_lamina_17",
+   "pneu": "orvalho_escarcha",
+   "aro": 17,
+   "tipo": "gelo",
+   "descricao": "Lumiar Lâmina 17\" com Orvalho Escarcha (gelo (cravo longo))",
+   "triangulos": 1872,
+   "kb": 189.6,
+   "dimensoes": [
+    0.184,
+    0.6665,
+    0.6665
+   ],
+   "arquivo": "modelos/conjuntos/lumiar_lamina_17_com_orvalho_escarcha.glb",
+   "arquivo_direita": "modelos/conjuntos/lumiar_lamina_17_com_orvalho_escarcha_direita.glb",
+   "previa": "previas/conjuntos/lumiar_lamina_17_com_orvalho_escarcha.png"
+  },
+  {
+   "id": "lumiar_estrela_18_com_saibro_pedregulho_m",
+   "roda": "lumiar_estrela_18",
+   "pneu": "saibro_pedregulho_m",
+   "aro": 18,
+   "tipo": "cascalho",
+   "descricao": "Lumiar Estrela Forjada 18\" com Saibro Pedregulho M (cascalho)",
+   "triangulos": 672,
+   "kb": 106.3,
+   "dimensoes": [
+    0.2119,
+    0.6665,
+    0.6665
+   ],
+   "arquivo": "modelos/conjuntos/lumiar_estrela_18_com_saibro_pedregulho_m.glb",
+   "arquivo_direita": "modelos/conjuntos/lumiar_estrela_18_com_saibro_pedregulho_m_direita.glb",
+   "previa": "previas/conjuntos/lumiar_estrela_18_com_saibro_pedregulho_m.png"
+  },
+  {
+   "id": "catavento_helice_16_com_pinhao_rodagem_a",
+   "roda": "catavento_helice_16",
+   "pneu": "pinhao_rodagem_a",
+   "aro": 16,
+   "tipo": "asfalto",
+   "descricao": "Catavento Hélice 16\" com Pinhão Rodagem A (asfalto)",
+   "triangulos": 432,
+   "kb": 85.1,
+   "dimensoes": [
+    0.2374,
+    0.6534,
+    0.6534
+   ],
+   "arquivo": "modelos/conjuntos/catavento_helice_16_com_pinhao_rodagem_a.glb",
+   "arquivo_direita": "modelos/conjuntos/catavento_helice_16_com_pinhao_rodagem_a_direita.glb",
+   "previa": "previas/conjuntos/catavento_helice_16_com_pinhao_rodagem_a.png"
+  },
+  {
+   "id": "catavento_helice_18_com_tracado_reta_final_m",
+   "roda": "catavento_helice_18",
+   "pneu": "tracado_reta_final_m",
+   "aro": 18,
+   "tipo": "slick",
+   "descricao": "Catavento Hélice 18\" com Traçado Reta Final M (slick)",
+   "triangulos": 432,
+   "kb": 85.2,
+   "dimensoes": [
+    0.2422,
+    0.6468,
+    0.6468
+   ],
+   "arquivo": "modelos/conjuntos/catavento_helice_18_com_tracado_reta_final_m.glb",
+   "arquivo_direita": "modelos/conjuntos/catavento_helice_18_com_tracado_reta_final_m_direita.glb",
+   "previa": "previas/conjuntos/catavento_helice_18_com_tracado_reta_final_m.png"
+  },
+  {
+   "id": "catavento_disco_17_com_tracado_tangente_chuva",
+   "roda": "catavento_disco_17",
+   "pneu": "tracado_tangente_chuva",
+   "aro": 17,
+   "tipo": "chuva",
+   "descricao": "Catavento Disco Aero 17\" com Traçado Tangente Chuva (chuva)",
+   "triangulos": 432,
+   "kb": 90.3,
+   "dimensoes": [
+    0.2275,
+    0.66,
+    0.66
+   ],
+   "arquivo": "modelos/conjuntos/catavento_disco_17_com_tracado_tangente_chuva.glb",
+   "arquivo_direita": "modelos/conjuntos/catavento_disco_17_com_tracado_tangente_chuva_direita.glb",
+   "previa": "previas/conjuntos/catavento_disco_17_com_tracado_tangente_chuva.png"
+  },
+  {
+   "id": "catavento_pas_15_com_tracado_reta_final",
+   "roda": "catavento_pas_15",
+   "pneu": "tracado_reta_final",
+   "aro": 15,
+   "tipo": "slick",
+   "descricao": "Catavento Pás Curvas 15\" com Traçado Reta Final (slick)",
+   "triangulos": 432,
+   "kb": 92.8,
+   "dimensoes": [
+    0.2474,
+    0.6468,
+    0.6468
+   ],
+   "arquivo": "modelos/conjuntos/catavento_pas_15_com_tracado_reta_final.glb",
+   "arquivo_direita": "modelos/conjuntos/catavento_pas_15_com_tracado_reta_final_direita.glb",
+   "previa": "previas/conjuntos/catavento_pas_15_com_tracado_reta_final.png"
+  },
+  {
+   "id": "catavento_pas_18_com_tracado_tangente_m",
+   "roda": "catavento_pas_18",
+   "pneu": "tracado_tangente_m",
+   "aro": 18,
+   "tipo": "asfalto",
+   "descricao": "Catavento Pás Curvas 18\" com Traçado Tangente M (asfalto)",
+   "triangulos": 432,
+   "kb": 93.3,
+   "dimensoes": [
+    0.234,
+    0.6534,
+    0.6534
+   ],
+   "arquivo": "modelos/conjuntos/catavento_pas_18_com_tracado_tangente_m.glb",
+   "arquivo_direita": "modelos/conjuntos/catavento_pas_18_com_tracado_tangente_m_direita.glb",
+   "previa": "previas/conjuntos/catavento_pas_18_com_tracado_tangente_m.png"
+  },
+  {
+   "id": "tiziu_cruzeta_13_com_tracado_tangente_d",
+   "roda": "tiziu_cruzeta_13",
+   "pneu": "tracado_tangente_d",
+   "aro": 13,
+   "tipo": "asfalto",
+   "descricao": "Tiziu Cruzeta 13\" com Traçado Tangente D (asfalto)",
+   "triangulos": 432,
+   "kb": 83.5,
+   "dimensoes": [
+    0.2419,
+    0.6534,
+    0.6534
+   ],
+   "arquivo": "modelos/conjuntos/tiziu_cruzeta_13_com_tracado_tangente_d.glb",
+   "arquivo_direita": "modelos/conjuntos/tiziu_cruzeta_13_com_tracado_tangente_d_direita.glb",
+   "previa": "previas/conjuntos/tiziu_cruzeta_13_com_tracado_tangente_d.png"
+  },
+  {
+   "id": "tiziu_cruzeta_15_com_saibro_pedregulho_d",
+   "roda": "tiziu_cruzeta_15",
+   "pneu": "saibro_pedregulho_d",
+   "aro": 15,
+   "tipo": "cascalho",
+   "descricao": "Tiziu Cruzeta 15\" com Saibro Pedregulho D (cascalho)",
+   "triangulos": 672,
+   "kb": 98.6,
+   "dimensoes": [
+    0.217,
+    0.6665,
+    0.6665
+   ],
+   "arquivo": "modelos/conjuntos/tiziu_cruzeta_15_com_saibro_pedregulho_d.glb",
+   "arquivo_direita": "modelos/conjuntos/tiziu_cruzeta_15_com_saibro_pedregulho_d_direita.glb",
+   "previa": "previas/conjuntos/tiziu_cruzeta_15_com_saibro_pedregulho_d.png"
+  },
+  {
+   "id": "tiziu_vazada_15_com_tracado_reta_final_m",
+   "roda": "tiziu_vazada_15",
+   "pneu": "tracado_reta_final_m",
+   "aro": 15,
+   "tipo": "slick",
+   "descricao": "Tiziu Cinco Vazados 15\" com Traçado Reta Final M (slick)",
+   "triangulos": 432,
+   "kb": 81.4,
+   "dimensoes": [
+    0.2474,
+    0.6468,
+    0.6468
+   ],
+   "arquivo": "modelos/conjuntos/tiziu_vazada_15_com_tracado_reta_final_m.glb",
+   "arquivo_direita": "modelos/conjuntos/tiziu_vazada_15_com_tracado_reta_final_m_direita.glb",
+   "previa": "previas/conjuntos/tiziu_vazada_15_com_tracado_reta_final_m.png"
+  },
+  {
+   "id": "tiziu_vazada_17_com_pinhao_rodagem_t",
+   "roda": "tiziu_vazada_17",
+   "pneu": "pinhao_rodagem_t",
+   "aro": 17,
+   "tipo": "terra",
+   "descricao": "Tiziu Cinco Vazados 17\" com Pinhão Rodagem T (terra e misto)",
+   "triangulos": 1872,
+   "kb": 177.5,
+   "dimensoes": [
+    0.2223,
+    0.6599,
+    0.6599
+   ],
+   "arquivo": "modelos/conjuntos/tiziu_vazada_17_com_pinhao_rodagem_t.glb",
+   "arquivo_direita": "modelos/conjuntos/tiziu_vazada_17_com_pinhao_rodagem_t_direita.glb",
+   "previa": "previas/conjuntos/tiziu_vazada_17_com_pinhao_rodagem_t.png"
+  },
+  {
+   "id": "tiziu_leque_14_com_orvalho_lamina",
+   "roda": "tiziu_leque_14",
+   "pneu": "orvalho_lamina",
+   "aro": 14,
+   "tipo": "chuva",
+   "descricao": "Tiziu Leque 14\" com Orvalho Lâmina d'Água (chuva)",
+   "triangulos": 432,
+   "kb": 94.5,
+   "dimensoes": [
+    0.2327,
+    0.66,
+    0.66
+   ],
+   "arquivo": "modelos/conjuntos/tiziu_leque_14_com_orvalho_lamina.glb",
+   "arquivo_direita": "modelos/conjuntos/tiziu_leque_14_com_orvalho_lamina_direita.glb",
+   "previa": "previas/conjuntos/tiziu_leque_14_com_orvalho_lamina.png"
+  },
+  {
+   "id": "mandacaru_trava_15_com_tropeiro_atolado_pro",
+   "roda": "mandacaru_trava_15",
+   "pneu": "tropeiro_atolado_pro",
+   "aro": 15,
+   "tipo": "lama",
+   "descricao": "Mandacaru Trava de Talão 15\" com Tropeiro Atolado Pro (lama)",
+   "triangulos": 672,
+   "kb": 97.5,
+   "dimensoes": [
+    0.1901,
+    0.6747,
+    0.6747
+   ],
+   "arquivo": "modelos/conjuntos/mandacaru_trava_15_com_tropeiro_atolado_pro.glb",
+   "arquivo_direita": "modelos/conjuntos/mandacaru_trava_15_com_tropeiro_atolado_pro_direita.glb",
+   "previa": "previas/conjuntos/mandacaru_trava_15_com_tropeiro_atolado_pro.png"
+  },
+  {
+   "id": "mandacaru_trava_17_com_pinhao_rodagem_areia",
+   "roda": "mandacaru_trava_17",
+   "pneu": "pinhao_rodagem_areia",
+   "aro": 17,
+   "tipo": "areia",
+   "descricao": "Mandacaru Trava de Talão 17\" com Pinhão Rodagem Areia (areia)",
+   "triangulos": 552,
+   "kb": 89.5,
+   "dimensoes": [
+    0.2479,
+    0.672,
+    0.672
+   ],
+   "arquivo": "modelos/conjuntos/mandacaru_trava_17_com_pinhao_rodagem_areia.glb",
+   "arquivo_direita": "modelos/conjuntos/mandacaru_trava_17_com_pinhao_rodagem_areia_direita.glb",
+   "previa": "previas/conjuntos/mandacaru_trava_17_com_pinhao_rodagem_areia.png"
+  },
+  {
+   "id": "mandacaru_sertao_16_com_saibro_chao_batido",
+   "roda": "mandacaru_sertao_16",
+   "pneu": "saibro_chao_batido",
+   "aro": 16,
+   "tipo": "terra",
+   "descricao": "Mandacaru Sertão Oito Furos 16\" com Saibro Chão Batido (terra e misto)",
+   "triangulos": 1872,
+   "kb": 178.7,
+   "dimensoes": [
+    0.224,
+    0.6599,
+    0.6599
+   ],
+   "arquivo": "modelos/conjuntos/mandacaru_sertao_16_com_saibro_chao_batido.glb",
+   "arquivo_direita": "modelos/conjuntos/mandacaru_sertao_16_com_saibro_chao_batido_direita.glb",
+   "previa": "previas/conjuntos/mandacaru_sertao_16_com_saibro_chao_batido.png"
+  },
+  {
+   "id": "mandacaru_lajedo_16_com_dunar_areiao",
+   "roda": "mandacaru_lajedo_16",
+   "pneu": "dunar_areiao",
+   "aro": 16,
+   "tipo": "areia",
+   "descricao": "Mandacaru Lajedo 16\" com Dunar Areião (areia)",
+   "triangulos": 552,
+   "kb": 89.5,
+   "dimensoes": [
+    0.2496,
+    0.672,
+    0.672
+   ],
+   "arquivo": "modelos/conjuntos/mandacaru_lajedo_16_com_dunar_areiao.glb",
+   "arquivo_direita": "modelos/conjuntos/mandacaru_lajedo_16_com_dunar_areiao_direita.glb",
+   "previa": "previas/conjuntos/mandacaru_lajedo_16_com_dunar_areiao.png"
+  },
+  {
+   "id": "tauari_magnesio_15_com_tracado_reta_final",
+   "roda": "tauari_magnesio_15",
+   "pneu": "tracado_reta_final",
+   "aro": 15,
+   "tipo": "slick",
+   "descricao": "Tauari Magnésio Seis 15\" com Traçado Reta Final (slick)",
+   "triangulos": 432,
+   "kb": 84.5,
+   "dimensoes": [
+    0.2474,
+    0.6468,
+    0.6468
+   ],
+   "arquivo": "modelos/conjuntos/tauari_magnesio_15_com_tracado_reta_final.glb",
+   "arquivo_direita": "modelos/conjuntos/tauari_magnesio_15_com_tracado_reta_final_direita.glb",
+   "previa": "previas/conjuntos/tauari_magnesio_15_com_tracado_reta_final.png"
+  },
+  {
+   "id": "tauari_magnesio_17_com_geada_prego_longo",
+   "roda": "tauari_magnesio_17",
+   "pneu": "geada_prego_longo",
+   "aro": 17,
+   "tipo": "gelo",
+   "descricao": "Tauari Magnésio Seis 17\" com Geada Prego Longo (gelo (cravo longo))",
+   "triangulos": 1872,
+   "kb": 186.1,
+   "dimensoes": [
+    0.184,
+    0.6665,
+    0.6665
+   ],
+   "arquivo": "modelos/conjuntos/tauari_magnesio_17_com_geada_prego_longo.glb",
+   "arquivo_direita": "modelos/conjuntos/tauari_magnesio_17_com_geada_prego_longo_direita.glb",
+   "previa": "previas/conjuntos/tauari_magnesio_17_com_geada_prego_longo.png"
+  },
+  {
+   "id": "tauari_malha_14_com_geada_cristal_pro",
+   "roda": "tauari_malha_14",
+   "pneu": "geada_cristal_pro",
+   "aro": 14,
+   "tipo": "neve",
+   "descricao": "Tauari Malha de Magnésio 14\" com Geada Cristal Pro (neve com cravos)",
+   "triangulos": 1872,
+   "kb": 190.1,
+   "dimensoes": [
+    0.1974,
+    0.6698,
+    0.6698
+   ],
+   "arquivo": "modelos/conjuntos/tauari_malha_14_com_geada_cristal_pro.glb",
+   "arquivo_direita": "modelos/conjuntos/tauari_malha_14_com_geada_cristal_pro_direita.glb",
+   "previa": "previas/conjuntos/tauari_malha_14_com_geada_cristal_pro.png"
+  },
+  {
+   "id": "tauari_malha_16_com_saibro_pedregulho_pro",
+   "roda": "tauari_malha_16",
+   "pneu": "saibro_pedregulho_pro",
+   "aro": 16,
+   "tipo": "cascalho",
+   "descricao": "Tauari Malha de Magnésio 16\" com Saibro Pedregulho Pro (cascalho)",
+   "triangulos": 672,
+   "kb": 109.8,
+   "dimensoes": [
+    0.2153,
+    0.6665,
+    0.6665
+   ],
+   "arquivo": "modelos/conjuntos/tauari_malha_16_com_saibro_pedregulho_pro.glb",
+   "arquivo_direita": "modelos/conjuntos/tauari_malha_16_com_saibro_pedregulho_pro_direita.glb",
+   "previa": "previas/conjuntos/tauari_malha_16_com_saibro_pedregulho_pro.png"
+  },
+  {
+   "id": "tauari_monobloco_18_com_pinhao_rodagem_a",
+   "roda": "tauari_monobloco_18",
+   "pneu": "pinhao_rodagem_a",
+   "aro": 18,
+   "tipo": "asfalto",
+   "descricao": "Tauari Monobloco Dez 18\" com Pinhão Rodagem A (asfalto)",
+   "triangulos": 432,
+   "kb": 90.5,
+   "dimensoes": [
+    0.234,
+    0.6534,
+    0.6534
+   ],
+   "arquivo": "modelos/conjuntos/tauari_monobloco_18_com_pinhao_rodagem_a.glb",
+   "arquivo_direita": "modelos/conjuntos/tauari_monobloco_18_com_pinhao_rodagem_a_direita.glb",
+   "previa": "previas/conjuntos/tauari_monobloco_18_com_pinhao_rodagem_a.png"
+  }
+ ]
+}
