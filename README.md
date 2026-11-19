@@ -2,6 +2,8 @@
 
 ![Mosaico com 39 conjuntos low poly de roda e pneu: rodas de aço estampado, liga, forjadas douradas e de magnésio com pneus slick, de asfalto, chuva, cascalho, terra, lama, neve, gelo e areia, com o nome da marca no flanco](docs/conjuntos-roda-e-pneu-low-poly-64-bits.jpg)
 
+https://github.com/user-attachments/assets/a73b689d-2dd8-4370-ba1c-fab00e3bda2e
+
 ▶️ **[Assista ao vídeo no YouTube](https://www.youtube.com/watch?v=1N9vVgjuItI)** · **[Baixe no itch.io](https://kkyqr.itch.io/scitizia-wheels-64)** (grátis, doação opcional)
 
 **Scitizia: rodas e pneus 64 bits** é uma coleção gratuita de rodas e pneus de carro em baixo polígono (low poly), com o visual retrô dos consoles de 64 bits, prontos para jogos de corrida em tempo real: **39 rodas** de 8 marcas inventadas (aro 13 a 18, aço, liga, forjadas e magnésio), **36 pneus** (29 linhas de 7 marcas inventadas e 7 pneus de série) em 9 tipos, do slick ao cravo longo para gelo, e **39 conjuntos montados** de roda e pneu, cada um com a versão do lado direito. São 153 arquivos glTF 2.0 binários (`.glb`) de 46,9 a 192,3 KB, com 336 a 1.872 triângulos, pivô no centro do cubo e giro no eixo X, e texturas PNG pintadas por código (o desenho do aro, o letreiro do flanco e a banda de rodagem) com filtro "nearest". As rodas e os pneus são os mesmos do jogo **Scitizia Rally Championship**; marcas, nomes e logotipos são inventados, sem nenhuma marca real.
