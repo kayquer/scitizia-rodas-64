@@ -1,5 +1,7 @@
 # Scitizia: 39 rodas e 36 pneus low poly em glTF/GLB com visual retrô de 64 bits
 
+🇧🇷 Português · **🇬🇧 [Read in English](README.en.md)**
+
 ![Mosaico com 39 conjuntos low poly de roda e pneu: rodas de aço estampado, liga, forjadas douradas e de magnésio com pneus slick, de asfalto, chuva, cascalho, terra, lama, neve, gelo e areia, com o nome da marca no flanco](docs/conjuntos-roda-e-pneu-low-poly-64-bits.jpg)
 
 https://github.com/user-attachments/assets/a73b689d-2dd8-4370-ba1c-fab00e3bda2e
